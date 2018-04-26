@@ -59,4 +59,8 @@ public class SplashActivity extends AppCompatActivity {
         thread.start();
     }
 
+    @Override
+    public void onBackPressed() {
+        //super.onBackPressed();
+    }
 }
