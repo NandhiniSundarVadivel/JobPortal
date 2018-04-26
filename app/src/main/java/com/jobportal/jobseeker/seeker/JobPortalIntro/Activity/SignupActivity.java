@@ -1,11 +1,14 @@
 package com.jobportal.jobseeker.seeker.JobPortalIntro.Activity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
 
+import com.jobportal.jobseeker.seeker.MainActivity;
 import com.jobportal.jobseeker.seeker.R;
 
 import butterknife.BindView;
@@ -53,14 +56,22 @@ public class SignupActivity extends AppCompatActivity {
         SignupActivity.this.getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_PAN);
     }
 
-    @OnClick(R.id.btn_signup_back)
-    public void onViewClicked() {
-        onBackPressed();
-    }
 
     @Override
     public void onBackPressed() {
         super.onBackPressed();
         finish();
+    }
+
+    @OnClick({R.id.btn_signup_back, R.id.btn_signup})
+    public void onViewClicked(View view) {
+        switch (view.getId()) {
+            case R.id.btn_signup_back:
+                break;
+            case R.id.btn_signup:
+                Intent navigation=new Intent(SignupActivity.this, MainActivity.class);
+                startActivity(navigation);
+                break;
+        }
     }
 }
