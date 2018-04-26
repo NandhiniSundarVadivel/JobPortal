@@ -8,7 +8,7 @@ import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
 
-import com.jobportal.jobseeker.seeker.MainActivity;
+import com.jobportal.jobseeker.seeker.JobSeekar.MainActivity;
 import com.jobportal.jobseeker.seeker.R;
 
 import butterknife.BindView;

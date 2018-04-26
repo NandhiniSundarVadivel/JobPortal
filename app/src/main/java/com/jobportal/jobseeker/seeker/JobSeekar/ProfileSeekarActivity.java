@@ -1,8 +1,10 @@
-package com.jobportal.jobseeker.seeker;
+package com.jobportal.jobseeker.seeker.JobSeekar;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
+
+import com.jobportal.jobseeker.seeker.R;
 
 /**
  * Created by uniflyn on 26/4/18.

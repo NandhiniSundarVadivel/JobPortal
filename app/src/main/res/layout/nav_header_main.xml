@@ -9,6 +9,7 @@
     android:theme="@style/ThemeOverlay.AppCompat.Dark">
 
     <LinearLayout
+        android:id="@+id/linear_header"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
@@ -16,12 +17,13 @@
         android:padding="10dp"
         android:gravity="center|left">
         <de.hdodenhof.circleimageview.CircleImageView
-            android:id="@+id/imageView"
+            android:id="@+id/profile_image"
             android:layout_width="80dp"
             android:layout_height="80dp"
             android:src="@drawable/placeholder_person" />
 
         <TextView
+            android:id="@+id/txt_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/nav_header_vertical_spacing"

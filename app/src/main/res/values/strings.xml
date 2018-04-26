@@ -28,4 +28,17 @@
 
     <!--profile screen-->
     <string name="profile">Profile</string>
+    <string name="verified_user">Verified User</string>
+    <string name="verified_email">Verified Email</string>
+    <string name="experience">Experience</string>
+    <string name="education">Education</string>
+    <string name="fields_study">Fields of Study:</string>
+    <string name="accomplishments">Accomplishments</string>
+    <string name="language">LANGUAGE</string>
+    <string name="project">PROJECT</string>
+    <string name="organization">ORGANIZATION</string>
+    <string name="certification">CERTIFICATION</string>
+    <string name="website">Website</string>
+    <string name="contact">Contact</string>
+    <string name="phone">Phone</string>
 </resources>

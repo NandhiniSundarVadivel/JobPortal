@@ -1,5 +1,6 @@
-package com.jobportal.jobseeker.seeker;
+package com.jobportal.jobseeker.seeker.JobSeekar;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -14,9 +15,21 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.LinearLayout;
+import android.widget.TextView;
+
+import com.jobportal.jobseeker.seeker.R;
+
+import de.hdodenhof.circleimageview.CircleImageView;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
+
+    NavigationView navigationView;
+    View header;
+    LinearLayout header_linear;
+    CircleImageView profile_image;
+    TextView txt_name;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,9 +53,23 @@ public class MainActivity extends AppCompatActivity
         drawer.addDrawerListener(toggle);
         toggle.syncState();
 
-        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+        navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
         displaySelectedScreen(R.id.nav_home);
+        //Header navigation view
+        header=navigationView.getHeaderView(0);
+        header_linear=(LinearLayout)header.findViewById(R.id.linear_header);
+        profile_image=(CircleImageView)header.findViewById(R.id.profile_image);
+        txt_name=(TextView)header.findViewById(R.id.txt_name);
+
+        header_linear.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent profile=new Intent(MainActivity.this,ProfileSeekarActivity.class);
+                startActivity(profile);
+            }
+        });
+
     }
 
     @Override
