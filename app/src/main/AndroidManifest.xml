@@ -28,6 +28,7 @@
             android:theme="@style/AppthemeSplashTwo" />
         <activity android:name=".JobPortalIntro.Activity.SignInSignupActivity"
             android:theme="@style/AppthemeActionbar" />
+        <activity android:name=".ProfileSeekarActivity"/>
     </application>
 
 </manifest>

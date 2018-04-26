@@ -17,4 +17,15 @@
     <string name="password">Password</string>
     <string name="confirm_password">Confirm Password</string>
     <string name="as_job_seeker">As Job Seeker</string>
+
+    <!--navigation drawer activity-->
+    <string name="home">HOME</string>
+    <string name="saved_jobs">SAVED JOBS</string>
+    <string name="record">RECORD</string>
+    <string name="my_schedule">MY SCHEDULE</string>
+    <string name="letters">LETTERS</string>
+    <string name="settings">SETTINGS</string>
+
+    <!--profile screen-->
+    <string name="profile">Profile</string>
 </resources>
