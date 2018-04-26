@@ -804,7 +804,7 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="100dp">
+        android:layout_height="80dp">
 
         <View
             android:layout_width="1dp"
@@ -857,7 +857,7 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="100dp">
+        android:layout_height="80dp">
 
         <View
             android:layout_width="1dp"
@@ -909,7 +909,7 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="100dp">
+        android:layout_height="80dp">
 
         <View
             android:layout_width="1dp"
@@ -960,7 +960,7 @@
 
     <View
         android:layout_width="1dp"
-        android:layout_height="50dp"
+        android:layout_height="30dp"
         android:layout_marginLeft="50dp"
         android:background="@color/colorBlackOne" />
 

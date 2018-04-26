@@ -41,4 +41,16 @@
     <string name="website">Website</string>
     <string name="contact">Contact</string>
     <string name="phone">Phone</string>
+
+    <!--add experience-->
+    <string name="add_experience">Add Experience</string>
+    <string name="title">Title</string>
+    <string name="company_name">Company Name</string>
+    <string name="location">Location</string>
+    <string name="from">From</string>
+    <string name="to">To</string>
+    <string name="year">Year</string>
+    <string name="Present">Present</string>
+    <string name="currently_working_here">Currently working here</string>
+    <string name="description">Description</string>
 </resources>
