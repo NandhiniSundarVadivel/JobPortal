@@ -28,7 +28,16 @@
             android:theme="@style/AppthemeSplashTwo" />
         <activity android:name=".JobPortalIntro.Activity.SignInSignupActivity"
             android:theme="@style/AppthemeActionbar" />
-        <activity android:name=".JobSeekar.ProfileSeekarActivity"/>
+        <activity android:name=".JobSeekar.ProfileSeekarActivity"
+            android:windowSoftInputMode="adjustPan"/>
+        <activity android:name=".JobSeekar.AddExperienceActivity"
+            android:windowSoftInputMode="adjustPan"/>
+        <activity android:name=".JobSeekar.AddEducationActivity"
+            android:windowSoftInputMode="adjustPan"/>
+        <activity android:name=".JobSeekar.AddAccomplishmentActivity"
+            android:windowSoftInputMode="adjustPan"/>
+        <activity android:name=".JobSeekar.EditProfileSeekerActivity"
+            android:windowSoftInputMode="adjustPan"/>
     </application>
 
 </manifest>

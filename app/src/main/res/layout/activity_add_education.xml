@@ -35,7 +35,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:gravity="center"
-            android:text="@string/add_experience"
+            android:text="@string/add_education"
             android:textColor="@color/colorWhite"
             android:textSize="@dimen/header_text" />
 
@@ -59,9 +59,10 @@
     </LinearLayout>
 
 
-<ScrollView
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -72,13 +73,13 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/title"
+            android:text="@string/institution"
             android:textColor="@color/colorBlackOne"/>
         <EditText
-            android:id="@+id/edit_title"
+            android:id="@+id/edit_institution"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/title"
+            android:hint="@string/institution"
             android:textSize="16sp"
             android:inputType="text"
             android:textColor="@color/colorDarkGray"
@@ -95,13 +96,13 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/company_name"
+            android:text="@string/degree"
             android:textColor="@color/colorBlackOne"/>
         <EditText
-            android:id="@+id/edit_company_name"
+            android:id="@+id/edit_degree"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/company_name"
+            android:hint="@string/degree"
             android:textColor="@color/colorDarkGray"
             android:textSize="16sp"
             android:inputType="text"
@@ -118,13 +119,13 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/location"
+            android:text="@string/field_of_study"
             android:textColor="@color/colorBlackOne"/>
         <EditText
-            android:id="@+id/edit_location"
+            android:id="@+id/edit_field_study"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/location"
+            android:hint="@string/field_of_study"
             android:textSize="16sp"
             android:inputType="text"
             android:textColor="@color/colorDarkGray"
@@ -144,7 +145,7 @@
             android:weightSum="2">
 
             <LinearLayout
-                android:id="@+id/linear_from"
+                android:id="@+id/linear_start_year"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
@@ -154,7 +155,7 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/from"
+                    android:text="@string/start_year"
                     android:textColor="@color/colorBlackOne"/>
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -162,7 +163,7 @@
                     android:gravity="center"
                     android:orientation="horizontal">
                 <EditText
-                    android:id="@+id/edit_from"
+                    android:id="@+id/edit_start"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="@string/year"
@@ -187,7 +188,7 @@
             </LinearLayout>
 
             <LinearLayout
-                android:id="@+id/linear_to"
+                android:id="@+id/linear_end_year"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
@@ -197,7 +198,7 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/to"
+                    android:text="@string/end_year"
                     android:textColor="@color/colorBlackOne"/>
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -205,10 +206,10 @@
                     android:gravity="center"
                     android:orientation="horizontal">
                     <EditText
-                        android:id="@+id/edit_to"
+                        android:id="@+id/edit_end"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="@string/Present"
+                        android:hint="@string/year"
                         android:textSize="16sp"
                         android:textColor="@color/colorDarkGray"
                         android:textColorHint="@color/colorDarkGray"
@@ -234,19 +235,38 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:weightSum="2">
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/currently_working_here"
-                android:textColor="@color/colorDarkGray"
-                android:layout_weight="1"/>
-            <android.support.v7.widget.SwitchCompat
-                android:id="@+id/switch_compact"
-                android:layout_width="wrap_content"
+                android:text="@string/grade"
+                android:layout_weight="1"
+                android:textColor="@color/colorBlackOne"/>
+            <TextView
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:checked="false" />
+                android:text="@string/or_expected_graduation"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:textColor="@color/colorBlackOne"/>
         </LinearLayout>
+        <EditText
+            android:id="@+id/edit_grade"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/grade"
+            android:textSize="16sp"
+            android:inputType="text"
+            android:textColor="@color/colorDarkGray"
+            android:textColorHint="@color/colorDarkGray"
+            android:background="@android:color/transparent"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/colorBlackOne"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"/>
 
         <TextView
             android:layout_width="match_parent"
@@ -272,6 +292,7 @@
 
         
     </LinearLayout>
-</ScrollView>
+
+    </ScrollView>
 
 </LinearLayout>
