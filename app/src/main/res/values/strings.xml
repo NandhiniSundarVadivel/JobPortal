@@ -44,6 +44,7 @@
 
     <!--add experience-->
     <string name="add_experience">Add Experience</string>
+    <string name="edit_experience">Edit Experience</string>
     <string name="title">Title</string>
     <string name="company_name">Company Name</string>
     <string name="location">Location</string>
@@ -53,7 +54,25 @@
     <string name="Present">Present</string>
     <string name="currently_working_here">Currently working here</string>
     <string name="description">Description</string>
-    <string name="email_address">Email address</string>
-    <string name="sign_in">Sign In</string>
-    <string name="personnel_position">Personnel Position</string>
+
+    <!--add education-->
+    <string name="add_education">Add Education</string>
+    <string name="edit_education">Edit Education</string>
+    <string name="institution">Institution/University</string>
+    <string name="degree">Degree</string>
+    <string name="field_of_study">Field of Study</string>
+    <string name="start_year">Start Year</string>
+    <string name="end_year">End Year</string>
+    <string name="grade">Grade</string>
+    <string name="or_expected_graduation">Or expected graduation</string>
+
+    <!--add accomplishment-->
+    <string name="add_accomplishment">Add Accomplishment</string>
+    <string name="accomplishment_title">Accomplishment Title</string>
+    <string name="accomplishment">Accomplishment</string>
+    <string name="organization_small">Organization</string>
+    <string name="language_small">Language</string>
+    <string name="proficiency">Proficiency</string>
+    <string name="edit_profile">Edit Profile</string>
+
 </resources>
