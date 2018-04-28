@@ -53,4 +53,7 @@
     <string name="Present">Present</string>
     <string name="currently_working_here">Currently working here</string>
     <string name="description">Description</string>
+    <string name="email_address">Email address</string>
+    <string name="sign_in">Sign In</string>
+    <string name="personnel_position">Personnel Position</string>
 </resources>

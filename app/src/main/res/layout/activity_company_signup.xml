@@ -1,0 +1,680 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.jobportal.jobseeker.seeker.JobPortalIntro.Activity.CompanySignupActivity">
+
+    <LinearLayout
+        android:id="@+id/linearOne"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+        <include
+            layout="@layout/activity_header"/>
+
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/linearTwo"
+        android:layout_below="@+id/linearOne"
+        android:layout_above="@+id/linearthree"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_margin="@dimen/margin_one"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+
+
+            <!-- Company Name-->
+            <LinearLayout
+                android:layout_margin="@dimen/margin"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+
+                    <RelativeLayout
+                        android:layout_width="50dp"
+                        android:layout_height="40dp">
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/mail_icon"/>
+                    </RelativeLayout>
+
+                    <EditText
+                        android:id="@+id/edt_comopany_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:textColor="@color/colorBlackTwo"
+                        android:hint="@string/company_name"
+                        android:inputType="text"
+                        android:textSize="@dimen/normal_text"/>
+
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/colorBlackOne"/>
+
+            </LinearLayout>
+
+            <!-- Company Size-->
+            <LinearLayout
+                android:layout_margin="@dimen/margin"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+
+                    <RelativeLayout
+                        android:layout_width="50dp"
+                        android:layout_height="40dp">
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/mail_icon"/>
+                    </RelativeLayout>
+
+                    <EditText
+                        android:id="@+id/edt_company_size"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:textColor="@color/colorBlackTwo"
+                        android:hint="Company Size"
+                        android:inputType="text"
+                        android:editable="false"
+                        android:layout_weight="1"
+                        android:textSize="@dimen/normal_text"/>
+                    <RelativeLayout
+                        android:layout_width="50dp"
+                        android:layout_height="40dp">
+
+                        <Button
+                            android:id="@+id/btn_down_arrow_cs"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@android:color/transparent"
+                            />
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/expand_icon"/>
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <!--Company Size list-->
+                <LinearLayout
+                    android:id="@+id/linearCompanySize"
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:background="@drawable/background_line_signup"
+                    android:layout_gravity="center">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:text="Select"
+                        android:gravity="center"
+                        android:textAlignment="center"/>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/colorBlackOne"/>
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/recycleCmpnSize"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                    </android.support.v7.widget.RecyclerView>
+
+                </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/colorBlackOne"/>
+
+            </LinearLayout>
+
+
+            <!-- Company Email-->
+            <LinearLayout
+                android:layout_margin="@dimen/margin"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+
+                    <RelativeLayout
+                        android:layout_width="50dp"
+                        android:layout_height="40dp">
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/mail_icon"/>
+                    </RelativeLayout>
+
+                    <EditText
+                        android:id="@+id/edt_comopany_email"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:textColor="@color/colorBlackTwo"
+                        android:hint="Company Email"
+                        android:inputType="textEmailAddress"
+                        android:textSize="@dimen/normal_text"/>
+
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/colorBlackOne"/>
+
+            </LinearLayout>
+
+            <!-- Company Phone-->
+            <LinearLayout
+                android:layout_margin="@dimen/margin"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+
+                    <RelativeLayout
+                        android:layout_width="50dp"
+                        android:layout_height="40dp">
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/mail_icon"/>
+                    </RelativeLayout>
+
+                    <EditText
+                        android:id="@+id/edt_comopany_phoneno"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:textColor="@color/colorBlackTwo"
+                        android:hint="Company Phone"
+                        android:inputType="textEmailAddress"
+                        android:textSize="@dimen/normal_text"/>
+
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/colorBlackOne"/>
+
+            </LinearLayout>
+
+
+            <!-- Personnel Position-->
+            <LinearLayout
+                android:layout_margin="@dimen/margin"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+
+                    <RelativeLayout
+                        android:layout_width="50dp"
+                        android:layout_height="40dp">
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/mail_icon"/>
+                    </RelativeLayout>
+
+                    <EditText
+                        android:id="@+id/edt_perssonnel_position"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:textColor="@color/colorBlackTwo"
+                        android:hint="@string/personnel_position"
+                        android:inputType="textEmailAddress"
+                        android:textSize="@dimen/normal_text"/>
+
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/colorBlackOne"/>
+
+            </LinearLayout>
+
+            <!-- Mobile Number-->
+            <LinearLayout
+                android:layout_margin="@dimen/margin"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+
+                    <RelativeLayout
+                        android:layout_width="50dp"
+                        android:layout_height="40dp">
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/mail_icon"/>
+                    </RelativeLayout>
+
+                    <EditText
+                        android:id="@+id/edt_mobile_no"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:textColor="@color/colorBlackTwo"
+                        android:hint="@string/mobile_number"
+                        android:inputType="textEmailAddress"
+                        android:textSize="@dimen/normal_text"/>
+
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/colorBlackOne"/>
+
+            </LinearLayout>
+
+
+
+            <!--Address One-->
+            <LinearLayout
+                android:layout_margin="@dimen/margin"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+
+                    <RelativeLayout
+                        android:layout_width="50dp"
+                        android:layout_height="40dp">
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/location_icon"/>
+                    </RelativeLayout>
+
+                    <EditText
+                        android:id="@+id/edt_adderess_one"
+                        android:textSize="@dimen/normal_text"
+                        android:inputType="text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:textColor="@color/colorBlackTwo"
+                        android:hint="@string/address_line_1"/>
+
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/colorBlackOne"/>
+
+            </LinearLayout>
+
+            <!--Address Two-->
+            <LinearLayout
+                android:layout_margin="@dimen/margin"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+
+                    <RelativeLayout
+                        android:layout_width="50dp"
+                        android:layout_height="40dp">
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/location_icon"/>
+                    </RelativeLayout>
+
+                    <EditText
+                        android:id="@+id/edt_address_two"
+                        android:inputType="text"
+                        android:textSize="@dimen/normal_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:textColor="@color/colorBlackTwo"
+                        android:hint="@string/address_line_2"/>
+
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/colorBlackOne"/>
+
+            </LinearLayout>
+
+            <!--City-->
+            <LinearLayout
+                android:layout_margin="@dimen/margin"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+
+                    <RelativeLayout
+                        android:layout_width="50dp"
+                        android:layout_height="40dp">
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/location_icon"/>
+                    </RelativeLayout>
+
+                    <EditText
+                        android:id="@+id/edt_city"
+                        android:textSize="@dimen/normal_text"
+                        android:inputType="text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:textColor="@color/colorBlackTwo"
+                        android:hint="@string/city"/>
+
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/colorBlackOne"/>
+
+            </LinearLayout>
+
+            <!--Password-->
+            <LinearLayout
+                android:layout_margin="@dimen/margin"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+
+                    <RelativeLayout
+                        android:layout_width="50dp"
+                        android:layout_height="40dp">
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/password_icon"/>
+                    </RelativeLayout>
+
+                    <EditText
+                        android:id="@+id/edt_password"
+                        android:textSize="@dimen/normal_text"
+                        android:inputType="textPassword"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:textColor="@color/colorBlackTwo"
+                        android:hint="@string/password"/>
+
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/colorBlackOne"/>
+
+            </LinearLayout>
+
+            <!--Confirm Password-->
+            <LinearLayout
+                android:layout_margin="@dimen/margin"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+
+                    <RelativeLayout
+                        android:layout_width="50dp"
+                        android:layout_height="40dp">
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/password_icon"/>
+                    </RelativeLayout>
+
+                    <EditText
+                        android:id="@+id/edt_confirm_password"
+                        android:textSize="@dimen/normal_text"
+                        android:inputType="textPassword"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:textColor="@color/colorBlackTwo"
+                        android:hint="@string/confirm_password"/>
+
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/colorBlackOne"/>
+
+            </LinearLayout>
+
+            <!--Terms and Privacy-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:gravity="left"
+                android:layout_marginLeft="15dp"
+                android:layout_gravity="center">
+
+                <TextView
+                    android:gravity="left"
+                    android:layout_marginBottom="5dp"
+                    android:layout_width="58dp"
+                    android:layout_height="wrap_content"
+                    android:text="I agree with "
+                    android:textSize="@dimen/normal_midle"/>
+                <TextView
+                    android:gravity="left"
+                    android:layout_marginBottom="5dp"
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:text="Terms Of Use"
+                    android:textSize="@dimen/normal_midle"/>
+                <TextView
+                    android:gravity="left"
+                    android:layout_marginBottom="5dp"
+                    android:layout_width="20dp"
+                    android:layout_height="wrap_content"
+                    android:text="and"
+                    android:textSize="@dimen/normal_midle"/>
+                <TextView
+                    android:gravity="left"
+                    android:layout_marginBottom="5dp"
+                    android:layout_width="90dp"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/normal_midle"
+                    android:text="Privacy Policy"/>
+            </LinearLayout>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="15dp"/>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@+id/linearthree"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorBlue">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/btn_signup"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:text="@string/sign_up"
+                android:textAlignment="center"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/header_text"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+</RelativeLayout>

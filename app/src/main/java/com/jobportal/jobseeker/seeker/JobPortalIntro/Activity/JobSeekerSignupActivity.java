@@ -7,6 +7,8 @@ import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.LinearLayout;
+import android.widget.TextView;
 
 import com.jobportal.jobseeker.seeker.JobSeekar.MainActivity;
 import com.jobportal.jobseeker.seeker.R;
@@ -15,7 +17,7 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
-public class SignupActivity extends AppCompatActivity {
+public class JobSeekerSignupActivity extends AppCompatActivity {
 
     @BindView(R.id.btn_signup_back)
     Button btnSignupBack;
@@ -41,19 +43,23 @@ public class SignupActivity extends AppCompatActivity {
     EditText edtConfirmPassword;
     @BindView(R.id.btn_signup)
     Button btnSignup;
+    @BindView(R.id.text_title)
+    TextView textTitle;
+    @BindView(R.id.linearTwo)
+    LinearLayout linearTwo;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_signup);
         ButterKnife.bind(this);
-
+        textTitle.setText(getString(R.string.sign_up));
     }
 
     @Override
     protected void onResume() {
         super.onResume();
-        SignupActivity.this.getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_PAN);
+        JobSeekerSignupActivity.this.getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_PAN);
     }
 
 
@@ -67,11 +73,13 @@ public class SignupActivity extends AppCompatActivity {
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.btn_signup_back:
+                finish();
                 break;
             case R.id.btn_signup:
-                Intent navigation=new Intent(SignupActivity.this, MainActivity.class);
+                Intent navigation = new Intent(JobSeekerSignupActivity.this, MainActivity.class);
                 startActivity(navigation);
                 break;
         }
     }
+
 }

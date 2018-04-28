@@ -31,10 +31,12 @@ public class SplashPageActivity extends AppCompatActivity {
         switch (view.getId()) {
             case R.id.btn_as_job_seeker:
                 Intent intent  = new Intent(SplashPageActivity.this,SignInSignupActivity.class);
+                intent.putExtra("page","job");
                 startActivity(intent);
                 break;
             case R.id.btn_as_company:
                 Intent intentcompany  = new Intent(SplashPageActivity.this,SignInSignupActivity.class);
+                intentcompany.putExtra("page","company");
                 startActivity(intentcompany);
                 break;
         }
