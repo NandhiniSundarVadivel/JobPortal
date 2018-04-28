@@ -1,11 +1,13 @@
 package com.jobportal.jobseeker.seeker.JobPortalIntro.Activity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
+import com.jobportal.jobseeker.seeker.JobSeekar.MainActivity;
 import com.jobportal.jobseeker.seeker.R;
 
 import butterknife.BindView;
@@ -42,6 +44,8 @@ public class SignInActivity extends AppCompatActivity {
             case R.id.btn_forget_pswd:
                 break;
             case R.id.btn_signip:
+                Intent intent = new Intent(SignInActivity.this, MainActivity.class);
+                startActivity(intent);
                 break;
             case R.id.btn_face_book:
                 break;
