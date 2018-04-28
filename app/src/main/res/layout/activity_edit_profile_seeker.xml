@@ -54,6 +54,9 @@
         </RelativeLayout>
 
     </LinearLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -69,13 +72,14 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
                 android:orientation="horizontal">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/name"
-                    android:textColor="@color/colorBlackOne" />
+                    android:textColor="@color/colorGrayOne" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -99,20 +103,21 @@
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:layout_marginBottom="5dp"
-                android:layout_marginTop="5dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
                 android:background="@color/colorBlackOne" />
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
                 android:orientation="horizontal">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/surname"
-                    android:textColor="@color/colorBlackOne" />
+                    android:textColor="@color/colorGrayOne" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -136,20 +141,21 @@
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:layout_marginBottom="5dp"
-                android:layout_marginTop="5dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
                 android:background="@color/colorBlackOne" />
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
                 android:orientation="horizontal">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/age"
-                    android:textColor="@color/colorBlackOne" />
+                    android:textColor="@color/colorGrayOne" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -165,7 +171,7 @@
                 android:layout_height="wrap_content"
                 android:background="@android:color/transparent"
                 android:hint="@string/age"
-                android:inputType="text"
+                android:inputType="number"
                 android:textColor="@color/colorDarkGray"
                 android:textColorHint="@color/colorDarkGray"
                 android:textSize="16sp" />
@@ -181,13 +187,14 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
                 android:orientation="horizontal">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/email"
-                    android:textColor="@color/colorBlackOne" />
+                    android:textColor="@color/colorGrayOne" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -211,21 +218,22 @@
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:layout_marginBottom="5dp"
-                android:layout_marginTop="5dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
                 android:background="@color/colorBlackOne" />
 
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
                 android:orientation="horizontal">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/mobile_number"
-                    android:textColor="@color/colorBlackOne" />
+                    android:textColor="@color/colorGrayOne" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -241,7 +249,7 @@
                 android:layout_height="wrap_content"
                 android:background="@android:color/transparent"
                 android:hint="@string/mobile_number"
-                android:inputType="text"
+                android:inputType="number"
                 android:textColor="@color/colorDarkGray"
                 android:textColorHint="@color/colorDarkGray"
                 android:textSize="16sp" />
@@ -249,21 +257,22 @@
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:layout_marginBottom="5dp"
-                android:layout_marginTop="5dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
                 android:background="@color/colorBlackOne" />
 
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
                 android:orientation="horizontal">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/address_line_1"
-                    android:textColor="@color/colorBlackOne" />
+                    android:textColor="@color/colorGrayOne" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -287,21 +296,22 @@
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:layout_marginBottom="5dp"
-                android:layout_marginTop="5dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
                 android:background="@color/colorBlackOne" />
 
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
                 android:orientation="horizontal">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/address_line_2"
-                    android:textColor="@color/colorBlackOne" />
+                    android:textColor="@color/colorGrayOne" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -325,21 +335,22 @@
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:layout_marginBottom="5dp"
-                android:layout_marginTop="5dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
                 android:background="@color/colorBlackOne" />
 
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
                 android:orientation="horizontal">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/city"
-                    android:textColor="@color/colorBlackOne" />
+                    android:textColor="@color/colorGrayOne" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -363,8 +374,8 @@
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:layout_marginBottom="5dp"
-                android:layout_marginTop="5dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
                 android:background="@color/colorBlackOne" />
 
 
@@ -373,7 +384,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/website"
-                    android:textColor="@color/colorBlackOne" />
+                    android:layout_marginBottom="5dp"
+                    android:textColor="@color/colorGrayOne" />
 
 
             <EditText
@@ -390,11 +402,13 @@
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:layout_marginBottom="5dp"
-                android:layout_marginTop="5dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
                 android:background="@color/colorBlackOne" />
 
         </LinearLayout>
     </LinearLayout>
+
+    </ScrollView>
 
 </LinearLayout>

@@ -74,12 +74,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/accomplishment_title"
-                android:textColor="@color/colorBlackOne" />
+                android:layout_marginBottom="5dp"
+                android:textColor="@color/colorGrayOne" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/accomplishment"
+                android:layout_marginBottom="5dp"
                 android:textColor="@color/colorDarkGray"
                 android:textSize="16sp" />
 
@@ -106,7 +108,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/accomplishment"
-                android:textColor="@color/colorBlackOne" />
+                android:layout_marginBottom="5dp"
+                android:textColor="@color/colorGrayOne" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -155,7 +158,8 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="@string/description"
-                    android:textColor="@color/colorBlackOne" />
+                    android:layout_marginBottom="5dp"
+                    android:textColor="@color/colorGrayOne" />
 
                 <TextView
                     android:layout_width="match_parent"
@@ -163,7 +167,7 @@
                     android:layout_weight="1"
                     android:gravity="right|center"
                     android:text="200"
-                    android:textColor="@color/colorBlackOne" />
+                    android:textColor="@color/colorGrayOne" />
             </LinearLayout>
 
             <EditText
@@ -180,8 +184,8 @@
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:layout_marginBottom="5dp"
-                android:layout_marginTop="5dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
                 android:background="@color/colorBlackOne" />
             </LinearLayout>
 
@@ -196,7 +200,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/language_small"
-                    android:textColor="@color/colorBlackOne"/>
+                    android:textColor="@color/colorGrayOne"/>
                 <EditText
                     android:id="@+id/edit_language"
                     android:layout_width="match_parent"
@@ -217,7 +221,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/proficiency"
-                    android:textColor="@color/colorBlackOne"/>
+                    android:textColor="@color/colorGrayOne"/>
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"

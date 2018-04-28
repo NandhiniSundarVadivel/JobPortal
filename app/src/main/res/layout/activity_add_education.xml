@@ -74,7 +74,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/institution"
-            android:textColor="@color/colorBlackOne"/>
+            android:layout_marginBottom="5dp"
+            android:textColor="@color/colorGrayOne"/>
         <EditText
             android:id="@+id/edit_institution"
             android:layout_width="match_parent"
@@ -89,15 +90,16 @@
             android:layout_width="match_parent"
             android:layout_height="1dp"
             android:background="@color/colorBlackOne"
-            android:layout_marginTop="5dp"
-            android:layout_marginBottom="5dp"/>
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"/>
 
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/degree"
-            android:textColor="@color/colorBlackOne"/>
+            android:layout_marginBottom="5dp"
+            android:textColor="@color/colorGrayOne"/>
         <EditText
             android:id="@+id/edit_degree"
             android:layout_width="match_parent"
@@ -112,15 +114,16 @@
             android:layout_width="match_parent"
             android:layout_height="1dp"
             android:background="@color/colorBlackOne"
-            android:layout_marginTop="5dp"
-            android:layout_marginBottom="5dp"/>
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"/>
 
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/field_of_study"
-            android:textColor="@color/colorBlackOne"/>
+            android:layout_marginBottom="5dp"
+            android:textColor="@color/colorGrayOne"/>
         <EditText
             android:id="@+id/edit_field_study"
             android:layout_width="match_parent"
@@ -135,8 +138,8 @@
             android:layout_width="match_parent"
             android:layout_height="1dp"
             android:background="@color/colorBlackOne"
-            android:layout_marginTop="5dp"
-            android:layout_marginBottom="5dp"/>
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"/>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -156,7 +159,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/start_year"
-                    android:textColor="@color/colorBlackOne"/>
+                    android:layout_marginBottom="5dp"
+                    android:textColor="@color/colorGrayOne"/>
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -182,8 +186,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
                     android:background="@color/colorBlackOne"
-                    android:layout_marginTop="5dp"
-                    android:layout_marginBottom="5dp"/>
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"/>
 
             </LinearLayout>
 
@@ -199,7 +203,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/end_year"
-                    android:textColor="@color/colorBlackOne"/>
+                    android:layout_marginBottom="5dp"
+                    android:textColor="@color/colorGrayOne"/>
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -225,8 +230,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
                     android:background="@color/colorBlackOne"
-                    android:layout_marginTop="5dp"
-                    android:layout_marginBottom="5dp"/>
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"/>
 
             </LinearLayout>
 
@@ -236,20 +241,21 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
+            android:layout_marginBottom="5dp"
             android:weightSum="2">
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/grade"
                 android:layout_weight="1"
-                android:textColor="@color/colorBlackOne"/>
+                android:textColor="@color/colorGrayOne"/>
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/or_expected_graduation"
                 android:layout_weight="1"
                 android:gravity="center_horizontal"
-                android:textColor="@color/colorBlackOne"/>
+                android:textColor="@color/colorGrayOne"/>
         </LinearLayout>
         <EditText
             android:id="@+id/edit_grade"
@@ -265,14 +271,15 @@
             android:layout_width="match_parent"
             android:layout_height="1dp"
             android:background="@color/colorBlackOne"
-            android:layout_marginTop="5dp"
-            android:layout_marginBottom="5dp"/>
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"/>
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/description"
-            android:textColor="@color/colorBlackOne"/>
+            android:layout_marginBottom="5dp"
+            android:textColor="@color/colorGrayOne"/>
         <EditText
             android:id="@+id/edit_description"
             android:layout_width="match_parent"

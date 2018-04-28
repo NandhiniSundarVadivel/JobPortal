@@ -40,7 +40,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="5dp"
+        android:layout_margin="10dp"
         android:gravity="center"
         android:orientation="horizontal">
 
@@ -55,7 +55,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/language"
                 android:textColor="@color/colorBlue"
-                android:textSize="@dimen/header_text"
+                android:textSize="16sp"
                 android:textStyle="bold" />
 
             <TextView
@@ -93,7 +93,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="5dp"
+        android:layout_margin="10dp"
         android:gravity="center"
         android:orientation="horizontal">
 
@@ -108,7 +108,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/project"
                 android:textColor="@color/colorBlue"
-                android:textSize="@dimen/header_text"
+                android:textSize="16sp"
                 android:textStyle="bold" />
 
             <TextView
@@ -146,7 +146,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="5dp"
+        android:layout_margin="10dp"
         android:gravity="center"
         android:orientation="horizontal">
 
@@ -161,7 +161,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/organization"
                 android:textColor="@color/colorBlue"
-                android:textSize="@dimen/header_text"
+                android:textSize="16sp"
                 android:textStyle="bold" />
 
             <TextView
@@ -199,7 +199,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="5dp"
+        android:layout_margin="10dp"
         android:gravity="center"
         android:orientation="horizontal">
 
@@ -214,7 +214,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/certification"
                 android:textColor="@color/colorBlue"
-                android:textSize="@dimen/header_text"
+                android:textSize="16sp"
                 android:textStyle="bold" />
 
             <TextView

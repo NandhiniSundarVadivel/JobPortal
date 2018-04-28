@@ -10,6 +10,9 @@
     <color name="colorBlackTwo">#FF8B8B8B</color>
     <color name="colorBlack">#000000</color>
     <color name="colorDarkGray">#696969</color>
+    <color name="colorLightGray">#dcdcdc</color>
+    <color name="colorGrayOne">#b3b3b3</color>
+    <color name="colorGrayTwo">#f2f2f2</color>
 
     <color name="colorSpTwo">#FF2D2D2D</color>
     <color name="colorSignup">#FF193D4D</color>

@@ -57,6 +57,8 @@ public class AddEducationActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_education);
         ButterKnife.bind(this);
+        editStart.setEnabled(false);
+        editEnd.setEnabled(false);
         if (getIntent()!=null){
             if (getIntent().getStringExtra("edit_add").equals("edit")){
                 txtTitle.setText(R.string.edit_education);

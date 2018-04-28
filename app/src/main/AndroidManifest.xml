@@ -38,8 +38,12 @@
             android:windowSoftInputMode="adjustPan"/>
         <activity android:name=".JobSeekar.EditProfileSeekerActivity"
             android:windowSoftInputMode="adjustPan"/>
-        <activity android:name=".JobPortalIntro.Activity.SignInActivity"/>
-        <activity android:name=".JobPortalIntro.Activity.CompanySignupActivity"/>
+        <activity
+            android:name=".JobPortalIntro.Activity.SignInActivity"/>
+        <activity
+            android:name=".JobPortalIntro.Activity.CompanySignupActivity"/>
+        <activity android:name=".JobSeekar.SavedJobsDetailActivity"/>
+        <activity android:name=".JobSeekar.RecordDetailsActivity"/>
 
     </application>
 
