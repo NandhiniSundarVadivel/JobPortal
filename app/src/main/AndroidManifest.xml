@@ -21,7 +21,7 @@
         </activity>
         <activity android:name=".JobSeekar.MainActivity" />
         <activity
-            android:name=".JobPortalIntro.Activity.SignupActivity"
+            android:name=".JobPortalIntro.Activity.JobSeekerSignupActivity"
             android:theme="@style/AppthemeActionbar" />
         <activity
             android:name=".JobPortalIntro.Activity.SplashPageActivity"
@@ -38,6 +38,9 @@
             android:windowSoftInputMode="adjustPan"/>
         <activity android:name=".JobSeekar.EditProfileSeekerActivity"
             android:windowSoftInputMode="adjustPan"/>
+        <activity android:name=".JobPortalIntro.Activity.SignInActivity"/>
+        <activity android:name=".JobPortalIntro.Activity.CompanySignupActivity"/>
+
     </application>
 
 </manifest>
