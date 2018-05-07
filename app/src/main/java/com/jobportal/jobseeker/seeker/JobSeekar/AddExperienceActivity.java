@@ -77,7 +77,6 @@ public class AddExperienceActivity extends AppCompatActivity {
                 onBackPressed();
                 break;
             case R.id.btn_upload:
-                onBackPressed();
                 break;
             case R.id.linear_from:
                 callDatePickerDialog("from");

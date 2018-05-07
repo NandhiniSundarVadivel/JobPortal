@@ -11,6 +11,9 @@
     <dimen name="marging_right_one">20dp</dimen>
     <dimen name="margin">10dp</dimen>
     <dimen name="margin_one">25dp</dimen>
+    <dimen name="margin_left_two">15dp</dimen>
+    <dimen name="margin_right_two">15dp</dimen>
+    
 
 
 
@@ -19,6 +22,16 @@
 
     <!--For Text Size-->
     <dimen name="header_text">17sp</dimen>
+    <dimen name="header_text_1">16sp</dimen>
+    <dimen name="header_text_2">18sp</dimen>
     <dimen name="normal_text">15sp</dimen>
+    <dimen name="normal_text_3">13sp</dimen>
+    <dimen name="normal_text_4">12sp</dimen>
     <dimen name="normal_midle">11sp</dimen>
+    <dimen name="big_text">20sp</dimen>
+    <dimen name="big_text_one">21sp</dimen>
+    <dimen name="big_text_two">22sp</dimen>
+    <dimen name="big_text_three">23sp</dimen>
+    <dimen name="big_text_four">24sp</dimen>
+    <dimen name="big_text_five">25sp</dimen>
 </resources>

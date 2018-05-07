@@ -1,8 +1,338 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-</LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+    <!--Setting layout-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_margin="8dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:background="@drawable/background_box_setting">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/btn_setting"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent"/>
+
+            <ImageView
+                android:id="@+id/imag_setting"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="25dp"
+                android:src="@drawable/account_setting"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/account_setting"
+                android:layout_centerVertical="true"
+                android:textAlignment="textStart"
+                android:layout_marginLeft="25dp"
+                android:layout_toEndOf="@+id/imag_setting"
+                android:textSize="@dimen/normal_text"
+                android:layout_centerHorizontal="true"
+                android:gravity="start"
+                android:layout_toRightOf="@+id/imag_setting" />
+
+        </RelativeLayout>
+
+
+
+    </LinearLayout>
+
+    <!-- Prefernce layout-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_margin="8dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:background="@drawable/background_box_setting">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/btn_preference"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent"/>
+
+            <ImageView
+                android:id="@+id/imag_preference"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="25dp"
+                android:src="@drawable/preference_icon"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/set_preferences"
+                android:layout_centerVertical="true"
+                android:textAlignment="textStart"
+                android:layout_marginLeft="25dp"
+                android:layout_toEndOf="@+id/imag_preference"
+                android:textSize="@dimen/normal_text"
+                android:layout_centerHorizontal="true"
+                android:gravity="start"
+                android:layout_toRightOf="@+id/imag_preference" />
+
+        </RelativeLayout>
+
+
+
+    </LinearLayout>
+
+    <!--verify layout-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_margin="8dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:background="@drawable/background_box_setting">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/btn_verify_profile"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent"/>
+
+            <ImageView
+                android:id="@+id/imag_verify"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="25dp"
+                android:src="@drawable/verify_icon"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Verify Profile"
+                android:layout_centerVertical="true"
+                android:textAlignment="textStart"
+                android:layout_marginLeft="25dp"
+                android:layout_toEndOf="@+id/imag_verify"
+                android:textSize="@dimen/normal_text"
+                android:layout_centerHorizontal="true"
+                android:gravity="start"
+                android:layout_toRightOf="@+id/imag_verify" />
+
+        </RelativeLayout>
+
+
+
+    </LinearLayout>
+
+    <!--Subscription layout-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_margin="8dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:background="@drawable/background_box_setting">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/btn_subscription"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent"/>
+
+            <ImageView
+                android:id="@+id/imag_subscription"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="25dp"
+                android:src="@drawable/wifi_empty"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/subscription"
+                android:layout_centerVertical="true"
+                android:textAlignment="textStart"
+                android:layout_marginLeft="25dp"
+                android:layout_toEndOf="@+id/imag_subscription"
+                android:textSize="@dimen/normal_text"
+                android:layout_centerHorizontal="true"
+                android:gravity="start"
+                android:layout_toRightOf="@+id/imag_subscription" />
+
+        </RelativeLayout>
+
+
+
+    </LinearLayout>
+
+    <!--version_layout-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_margin="8dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:background="@drawable/background_box_setting">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/btn_version"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent"/>
+
+            <ImageView
+                android:id="@+id/imag_version"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="25dp"
+                android:src="@drawable/version_icon"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Version"
+                android:layout_centerVertical="true"
+                android:textAlignment="textStart"
+                android:layout_marginLeft="25dp"
+                android:layout_toEndOf="@+id/imag_version"
+                android:textSize="@dimen/normal_text"
+                android:layout_centerHorizontal="true"
+                android:gravity="start"
+                android:layout_toRightOf="@+id/imag_version" />
+
+        </RelativeLayout>
+
+
+
+    </LinearLayout>
+
+    <!--share be reach-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_margin="8dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:background="@drawable/background_box_setting">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/btn_sharebe_reach"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent"/>
+
+            <ImageView
+                android:id="@+id/imag_sharebe_reach"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="25dp"
+                android:src="@drawable/share_be_reach"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Share Be-Reached"
+                android:layout_centerVertical="true"
+                android:textAlignment="textStart"
+                android:layout_marginLeft="25dp"
+                android:layout_toEndOf="@+id/imag_sharebe_reach"
+                android:textSize="@dimen/normal_text"
+                android:layout_centerHorizontal="true"
+                android:gravity="start"
+                android:layout_toRightOf="@+id/imag_sharebe_reach" />
+
+        </RelativeLayout>
+
+
+
+    </LinearLayout>
+
+    <!--Terms and condition-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_margin="8dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:background="@drawable/background_box_setting">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/btn_terms"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent"/>
+
+            <ImageView
+                android:id="@+id/imag_terms"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="25dp"
+                android:src="@drawable/terms_icon"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/terms_amp_conditions"
+                android:layout_centerVertical="true"
+                android:textAlignment="textStart"
+                android:layout_marginLeft="25dp"
+                android:layout_toEndOf="@+id/imag_terms"
+                android:textSize="@dimen/normal_text"
+                android:layout_centerHorizontal="true"
+                android:gravity="start"
+                android:layout_toRightOf="@+id/imag_terms" />
+
+        </RelativeLayout>
+
+
+
+    </LinearLayout>
+
+    </LinearLayout>
+
+
+</ScrollView>

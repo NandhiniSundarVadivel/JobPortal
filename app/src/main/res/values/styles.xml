@@ -50,10 +50,26 @@
         <item name="colorSwitchThumbNormal">#ffffff</item>
         <!-- inactive track color (30% transparency) -->
         <item name="android:colorForeground">#FF3A5BB8</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="windowActionBar">false</item>
         </style>
 
     <style name="DialogTheme" parent="Theme.AppCompat.Light.Dialog">
-        <item name="colorAccent">#FF3A5BB8</item>
+        <item name="colorAccent">@color/colorPrimary</item>
     </style>
+
+    <style name="AppTheme.PageControl" parent="AppTheme">
+        <item name="apcStyles">@style/AppPageControlStyle</item>
+    </style>
+    <style name="AppPageControlStyle">
+        <item name="apc_colorCurrentDefault">@color/colorWhite</item>
+        <item name="apc_colorCurrentPressed">@color/colorWhite</item>
+        <item name="apc_colorNormalDefault">@color/colorBlackTwo</item>
+        <item name="apc_colorNormalPressed">@color/colorBlackTwo</item>
+    </style>
+
+   <!-- <style name="DialogTheme" parent="Theme.AppCompat.Light.Dialog">
+        <item name="colorAccent">@color/colorPrimary</item>
+    </style>-->
 
 </resources>

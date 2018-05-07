@@ -27,11 +27,21 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
+            <LinearLayout
+                android:id="@+id/linearOne"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
             <include
                 layout="@layout/item_my_schedules"/>
+            </LinearLayout>
 
+            <LinearLayout
+                android:id="@+id/linearTwo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
             <include
                 layout="@layout/item_my_schedules"/>
+            </LinearLayout>
         </LinearLayout>
 
         <TextView
@@ -48,11 +58,22 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/linearThree">
             <include
                 layout="@layout/item_my_schedules"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearFour"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
 
             <include
                 layout="@layout/item_my_schedules"/>
+            </LinearLayout>
         </LinearLayout>
     </LinearLayout>
     </ScrollView>

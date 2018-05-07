@@ -59,6 +59,7 @@ public class AddEducationActivity extends AppCompatActivity {
         ButterKnife.bind(this);
         editStart.setEnabled(false);
         editEnd.setEnabled(false);
+        editFieldStudy.setEnabled(false);
         if (getIntent()!=null){
             if (getIntent().getStringExtra("edit_add").equals("edit")){
                 txtTitle.setText(R.string.edit_education);
@@ -75,7 +76,7 @@ public class AddEducationActivity extends AppCompatActivity {
                 onBackPressed();
                 break;
             case R.id.btn_upload:
-                onBackPressed();
+
                 break;
             case R.id.linear_start_year:
                 callDatePickerDialog("start");

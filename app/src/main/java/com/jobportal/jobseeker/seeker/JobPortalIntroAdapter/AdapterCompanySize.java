@@ -21,7 +21,7 @@ public class AdapterCompanySize extends RecyclerView.Adapter<AdapterCompanySize.
     static Context context;
 
     String userId;
-    public callbackListener callbackListener;
+    CustomItemClickListener listener;
     public static class MyViewHolder extends RecyclerView.ViewHolder {
 
 
@@ -40,13 +40,14 @@ public class AdapterCompanySize extends RecyclerView.Adapter<AdapterCompanySize.
 
     }
 
-    public  interface callbackListener{
-        public void  callback();
+    public interface CustomItemClickListener {
+        public void onItemClick(View v, int position);
     }
-    public AdapterCompanySize(List<CompanySizeModel> data, Context contexts) {
+    public AdapterCompanySize(List<CompanySizeModel> data, Context contexts,CustomItemClickListener itemClickListener) {
         this.myProjectModels = data;
 //        listener = listener1;
         context = contexts;
+        this.listener = itemClickListener;
 
     }
 
@@ -65,6 +66,13 @@ public class AdapterCompanySize extends RecyclerView.Adapter<AdapterCompanySize.
     public void onBindViewHolder(final MyViewHolder holder, final int listPosition) {
 
         holder.txt_company_size.setText(myProjectModels.get(listPosition).getTitle());
+
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                listener.onItemClick(v, listPosition);
+            }
+        });
 
     }
 

@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 
 import com.jobportal.jobseeker.seeker.R;
 
@@ -41,6 +42,10 @@ public class EditProfileSeekerActivity extends AppCompatActivity {
     EditText editCity;
     @BindView(R.id.edit_website)
     EditText editWebsite;
+    @BindView(R.id.linearOne)
+    LinearLayout linearOne;
+    @BindView(R.id.linearBootom)
+    LinearLayout linearBootom;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -49,7 +54,7 @@ public class EditProfileSeekerActivity extends AppCompatActivity {
         ButterKnife.bind(this);
     }
 
-    @OnClick({R.id.btn_back, R.id.btn_upload})
+    @OnClick({R.id.btn_back, R.id.btn_upload,R.id.linearBootom})
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.btn_back:
@@ -58,6 +63,15 @@ public class EditProfileSeekerActivity extends AppCompatActivity {
             case R.id.btn_upload:
                 onBackPressed();
                 break;
+            case R.id.linearBootom:
+                onBackPressed();
+                break;
         }
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        finish();
     }
 }

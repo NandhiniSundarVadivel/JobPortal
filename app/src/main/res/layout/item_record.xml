@@ -42,13 +42,13 @@
                     android:layout_height="wrap_content"
                     android:text="Part Time"
                     android:layout_margin="3dp"
-                    android:textColor="@color/colorBlackTwo"/>
+                    android:textColor="@color/colorBlackThre"/>
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Pafos Cyprus"
                     android:layout_margin="3dp"
-                    android:textColor="@color/colorGrayOne"/>
+                    android:textColor="@color/colorBlackTwo"/>
             </LinearLayout>
         </LinearLayout>
 

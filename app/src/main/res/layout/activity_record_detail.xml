@@ -107,7 +107,7 @@
                     android:layout_width="20dp"
                     android:layout_height="20dp"
                     android:padding="5dp"
-                    android:src="@drawable/back_icon" />
+                    android:src="@drawable/check_icon" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -126,7 +126,7 @@
                     android:layout_width="20dp"
                     android:layout_height="20dp"
                     android:padding="5dp"
-                    android:src="@drawable/back_icon" />
+                    android:src="@drawable/email_vf_icon" />
 
                 <TextView
                     android:layout_width="match_parent"
@@ -167,7 +167,7 @@
                 android:layout_width="20dp"
                 android:layout_height="20dp"
                 android:padding="5dp"
-                android:src="@drawable/back_icon" />
+                android:src="@drawable/location_two_icon" />
 
             <TextView
                 android:layout_width="wrap_content"

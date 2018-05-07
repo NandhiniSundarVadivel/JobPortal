@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/language_small"
+            android:textColor="@color/colorGrayOne"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="5dp"/>
+        <EditText
+            android:id="@+id/edit_language"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/language_small"
+            android:textColor="@color/colorDarkGray"
+            android:textSize="16sp"
+            android:inputType="text"
+            android:textColorHint="@color/colorDarkGray"
+            android:background="@android:color/transparent"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="5dp"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/colorBlackOne"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="5dp"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/proficiency"
+            android:layout_weight="1"
+            android:textColor="@color/colorGrayOne"/>
+
+            <RelativeLayout
+                android:layout_width="50dp"
+                android:layout_height="50dp">
+
+                <Button
+                    android:id="@+id/btn_down_lan"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/transparent"/>
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/expand_icon"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"/>
+
+            </RelativeLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/linearLan"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:orientation="vertical"
+            android:background="@drawable/background_stroke_white">
+
+            <LinearLayout
+                android:id="@+id/linearBasic"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="@drawable/background_box_fill_up">
+
+                <TextView
+                    android:id="@+id/txtBasic"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Basic"
+                    android:textColor="@color/colorWhite"
+                    android:textAlignment="center"
+                    android:layout_gravity="center"/>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/linearFl"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+               android:background="@drawable/background_box_fill" >
+
+                <TextView
+                    android:id="@+id/txtFl"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Fluent"
+                    android:textColor="@color/colorBlackTwo"
+                    android:textAlignment="center"
+                    android:layout_gravity="center"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearNative"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                >
+
+                <TextView
+                    android:id="@+id/txtNative"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Native"
+                    android:textColor="@color/colorBlackTwo"
+                    android:textAlignment="center"
+                    android:layout_gravity="center"/>
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

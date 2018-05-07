@@ -108,7 +108,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:textColor="@color/colorGrayOne"
-                    android:text="@string/company_size" />
+                    android:text="Company Size" />
 
                 <TextView
                     android:layout_width="match_parent"

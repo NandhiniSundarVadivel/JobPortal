@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
 
     <LinearLayout
+        android:id="@+id/linearOne"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:background="@color/colorAccent"
@@ -56,7 +57,10 @@
     </LinearLayout>
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:layout_below="@+id/linearOne"
+        android:layout_above="@+id/linearBootom"
+        android:layout_weight="1">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -411,4 +415,24 @@
 
     </ScrollView>
 
-</LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearBootom"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="center"
+        android:background="@color/colorBlue">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/submit"
+            android:textColor="@color/colorWhite"
+            android:textAlignment="center"
+            android:textSize="@dimen/normal_text"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,9 +1,12 @@
 package com.jobportal.jobseeker.seeker.JobPortalIntro.Activity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.text.Html;
+import android.util.Log;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
@@ -12,6 +15,7 @@ import android.widget.LinearLayout;
 import android.widget.ScrollView;
 import android.widget.TextView;
 
+import com.jobportal.jobseeker.seeker.Company.NavigationActivity;
 import com.jobportal.jobseeker.seeker.JobPortalIntroAdapter.AdapterCompanySize;
 import com.jobportal.jobseeker.seeker.JobPortalIntroModel.CompanySizeModel;
 import com.jobportal.jobseeker.seeker.R;
@@ -63,6 +67,9 @@ public class CompanySignupActivity extends AppCompatActivity {
     RecyclerView recycleCmpnSize;
     List<CompanySizeModel> companySizeModels;
     AdapterCompanySize adapterCompanySize;
+    @BindView(R.id.txt_terms)
+    TextView txtTerms;
+    String terms = "<pre>I agree with <strong>Terms Of Use</strong> and <strong>Privacy Policy</strong></pre>";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -72,6 +79,7 @@ public class CompanySignupActivity extends AppCompatActivity {
         final LinearLayoutManager layoutManager = new LinearLayoutManager(this);
         layoutManager.setOrientation(LinearLayoutManager.VERTICAL);
         recycleCmpnSize.setLayoutManager(new LinearLayoutManager(this));
+        txtTerms.setText(Html.fromHtml(terms));
 
         companySizeModels = new ArrayList<>();
         companySizeModels.add(new CompanySizeModel("1 to 9 Employees"));
@@ -82,7 +90,15 @@ public class CompanySignupActivity extends AppCompatActivity {
         companySizeModels.add(new CompanySizeModel("50 to 79 Employees"));
         companySizeModels.add(new CompanySizeModel("60 to 89 Employees"));
         companySizeModels.add(new CompanySizeModel("71 to 99 Employees"));
-        adapterCompanySize = new AdapterCompanySize(companySizeModels,CompanySignupActivity.this);
+        adapterCompanySize = new AdapterCompanySize(companySizeModels, CompanySignupActivity.this, new AdapterCompanySize.CustomItemClickListener() {
+            @Override
+            public void onItemClick(View v, int position) {
+               String item = companySizeModels.get(position).getTitle();
+               Log.e("selecteditem",item);
+                edtCompanySize.setText(item);
+                linearCompanySize.setVisibility(View.GONE);
+            }
+        });
         recycleCmpnSize.setAdapter(adapterCompanySize);
 
     }
@@ -94,6 +110,8 @@ public class CompanySignupActivity extends AppCompatActivity {
                 onBackPressed();
                 break;
             case R.id.btn_signup:
+                Intent intent = new Intent(CompanySignupActivity.this, NavigationActivity.class);
+                startActivity(intent);
                 break;
             case R.id.btn_down_arrow_cs:
                 linearCompanySize.setVisibility(View.VISIBLE);

@@ -83,6 +83,7 @@
                 android:layout_height="100dp">
 
                 <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/prfPic"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:src="@drawable/placeholder_person" />
@@ -107,7 +108,8 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="30dp"
+            android:gravity="center"
             android:orientation="horizontal"
             android:weightSum="2">
 
@@ -122,12 +124,13 @@
                     android:layout_width="20dp"
                     android:layout_height="20dp"
                     android:padding="5dp"
-                    android:src="@drawable/back_icon" />
+                    android:src="@drawable/check_icon" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/verified_user"
+                    android:textSize="@dimen/normal_midle"
                     android:textColor="@color/colorWhite" />
             </LinearLayout>
 
@@ -135,18 +138,20 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:gravity="center"
                 android:orientation="horizontal">
 
                 <ImageView
                     android:layout_width="20dp"
                     android:layout_height="20dp"
                     android:padding="5dp"
-                    android:src="@drawable/back_icon" />
+                    android:src="@drawable/email_vf_icon" />
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/verified_email"
+                    android:textSize="@dimen/normal_midle"
                     android:textColor="@color/colorWhite" />
             </LinearLayout>
         </LinearLayout>
@@ -157,21 +162,28 @@
             android:gravity="center"
             android:text=" Specialized Creative Graphic Designer \n &amp; Back-end developer"
             android:textColor="@color/colorBlackTwo" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="5dp"/>
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
             android:text="165 Profile Views"
-            android:textColor="@color/colorWhite" />
-
+            android:textColor="@color/colorLightGray" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="5dp"/>
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
             android:text="6 Recommendations"
-            android:textColor="@color/colorWhite" />
-
+            android:textColor="@color/colorLightGray" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="5dp"/>
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -182,7 +194,7 @@
                 android:layout_width="20dp"
                 android:layout_height="20dp"
                 android:padding="5dp"
-                android:src="@drawable/back_icon" />
+                android:src="@drawable/location_two_icon" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -194,7 +206,7 @@
 
         <View
             android:layout_width="match_parent"
-            android:layout_height="10dp" />
+            android:layout_height="20dp" />
 
 
     </LinearLayout>

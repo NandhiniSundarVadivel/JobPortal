@@ -8,19 +8,32 @@
     <color name="colorWhite">#FFFFFF</color>
     <color name="colorBlackOne">#FFD3D3D3</color>
     <color name="colorBlackTwo">#FF8B8B8B</color>
+    <color name="colorBlackThre">#FF4E4E4E</color>
+    <color name="colorBlackfo">#FF838181</color>
     <color name="colorBlack">#000000</color>
     <color name="colorDarkGray">#696969</color>
     <color name="colorLightGray">#dcdcdc</color>
     <color name="colorGrayOne">#b3b3b3</color>
     <color name="colorGrayTwo">#f2f2f2</color>
 
+    <color name="colorLB">#FFEBEBEB</color>
+    <color name="colorLBT">#FF5E5E5E</color>
+    <color name="colorBO">#FF225B6F</color>
+    <color name="colorBT">#FF2B85AF</color>
+    <color name="colorGreen">#FF43AE4B</color>
+    <color name="colorBlueT">#FF4FB3E5</color>
+    <color name="colorRedTwo">#FFC62D2D</color>
+
     <color name="colorSpTwo">#FF2D2D2D</color>
     <color name="colorSignup">#FF193D4D</color>
-
     <color name="colorBlue">#FF4FB3E6</color>
     <color name="colorBlueOne">#FF30A5E1</color>
+
     <color name="colorHeader">#FF2B557C</color>
     <color name="colorRed">#ff0000</color>
+    <color name="colorBlackThree">#13DCDCDC</color>
+    <color name="colorRed1">#FFEB7E7F</color>
+
 
 
 </resources>

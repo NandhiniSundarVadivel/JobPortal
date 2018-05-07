@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single"
+        android:id="@+id/home">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/home_icon"
+            android:title="@string/home" />
+
+    </group>
+    <group android:checkableBehavior="single"
+        android:id="@+id/browse_candidates">
+        <item
+            android:id="@+id/nav_browse_candidates"
+            android:icon="@drawable/search_icon"
+            android:title="@string/browse_candidates" />
+
+    </group>
+    <group android:checkableBehavior="single"
+        android:id="@+id/saved_profiles">
+        <item
+            android:id="@+id/nav_saved_profiles"
+            android:icon="@drawable/verify_icon"
+            android:title="SAVED/SHORTLISTED PROFILES" />
+
+    </group>
+
+    <group android:checkableBehavior="single"
+        android:id="@+id/create_job">
+        <item
+            android:id="@+id/nav_create_job"
+            android:icon="@drawable/as_job_icon"
+            android:title="@string/create_a_job" />
+
+    </group>
+    <group android:checkableBehavior="single"
+        android:id="@+id/job_listing">
+        <item
+            android:id="@+id/nav_job_listing"
+            android:icon="@drawable/job_list"
+            android:title="@string/job_listing" />
+
+    </group>
+    <group android:checkableBehavior="single"
+        android:id="@+id/stages">
+        <item
+            android:id="@+id/nav_stages"
+            android:icon="@drawable/stage_icon"
+            android:title="@string/stages" />
+
+    </group>
+
+    <group android:checkableBehavior="single"
+        android:id="@+id/schedule">
+        <item
+            android:id="@+id/nav_schedule"
+            android:icon="@drawable/my_schedule_icon"
+            android:title="@string/schedule_caps" />
+
+    </group>
+    <group android:checkableBehavior="single"
+        android:id="@+id/setting">
+        <item
+            android:id="@+id/nav_setting"
+            android:icon="@drawable/setting_icon"
+            android:title="@string/settings" />
+
+    </group>
+
+</menu>

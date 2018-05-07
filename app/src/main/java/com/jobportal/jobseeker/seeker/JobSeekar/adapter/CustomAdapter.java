@@ -36,9 +36,13 @@ public class CustomAdapter extends ArrayAdapter<TextModel> {
         txtTitle.setText(array.get(position).getText());
 
         if (array.get(position).isSelect()){
+            //view.setBackgroundColor(context.getResources().getColor(R.color.colorBlue));
             txtTitle.setBackgroundColor(context.getResources().getColor(R.color.colorBlue));
+            txtTitle.setTextColor(context.getResources().getColor(R.color.colorWhite));
         }else {
+            //view.setBackgroundColor(context.getResources().getColor(R.color.colorWhite));
             txtTitle.setBackgroundColor(context.getResources().getColor(R.color.colorWhite));
+            txtTitle.setTextColor(context.getResources().getColor(R.color.colorGrayOne));
         }
         return view;
     }

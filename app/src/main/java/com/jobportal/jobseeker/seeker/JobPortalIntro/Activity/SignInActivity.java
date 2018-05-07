@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
+import com.jobportal.jobseeker.seeker.Company.NavigationActivity;
 import com.jobportal.jobseeker.seeker.JobSeekar.MainActivity;
 import com.jobportal.jobseeker.seeker.R;
 
@@ -30,12 +31,21 @@ public class SignInActivity extends AppCompatActivity {
     Button btnGoogleplus;
     @BindView(R.id.btn_linkedin)
     Button btnLinkedin;
-
+    String page;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_in);
         ButterKnife.bind(this);
+        try{
+            if(getIntent()!=null){
+                page = getIntent().getStringExtra("page");
+
+            }
+
+        }catch (Exception e){
+            e.printStackTrace();
+        }
     }
 
     @OnClick({R.id.btn_forget_pswd, R.id.btn_signip, R.id.btn_face_book, R.id.btn_googleplus, R.id.btn_linkedin})
@@ -44,8 +54,13 @@ public class SignInActivity extends AppCompatActivity {
             case R.id.btn_forget_pswd:
                 break;
             case R.id.btn_signip:
-                Intent intent = new Intent(SignInActivity.this, MainActivity.class);
-                startActivity(intent);
+                if(page.equalsIgnoreCase("1")) {
+                    Intent intent = new Intent(SignInActivity.this, MainActivity.class);
+                    startActivity(intent);
+                }else {
+                    Intent intent = new Intent(SignInActivity.this, NavigationActivity.class);
+                    startActivity(intent);
+                }
                 break;
             case R.id.btn_face_book:
                 break;

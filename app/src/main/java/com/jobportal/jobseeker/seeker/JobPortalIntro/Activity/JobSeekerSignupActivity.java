@@ -3,6 +3,7 @@ package com.jobportal.jobseeker.seeker.JobPortalIntro.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.text.Html;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
@@ -47,6 +48,9 @@ public class JobSeekerSignupActivity extends AppCompatActivity {
     TextView textTitle;
     @BindView(R.id.linearTwo)
     LinearLayout linearTwo;
+    @BindView(R.id.txt_terms)
+    TextView txtTerms;
+    String terms = "<pre>I agree with <strong>Terms Of Use</strong> and <strong>Privacy Policy</strong></pre>";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,6 +58,7 @@ public class JobSeekerSignupActivity extends AppCompatActivity {
         setContentView(R.layout.activity_signup);
         ButterKnife.bind(this);
         textTitle.setText(getString(R.string.sign_up));
+        txtTerms.setText(Html.fromHtml(terms));
     }
 
     @Override
