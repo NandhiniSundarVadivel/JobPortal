@@ -59,16 +59,18 @@
             android:layout_marginLeft="15dp"
             android:layout_marginRight="15dp"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="130dp"
+            android:background="@drawable/background_box_schedule_delete">
 
 
             <EditText
                 android:id="@+id/edt_message"
                 android:layout_width="match_parent"
-                android:layout_height="130dp"
+                android:layout_height="wrap_content"
                 android:paddingLeft="8dp"
                 android:paddingRight="8dp"
-                android:background="@drawable/background_box_schedule_delete"/>
+                android:layout_margin="5dp"
+                android:background="@android:color/transparent"/>
 
         </LinearLayout>
         <View
@@ -90,6 +92,9 @@
                 android:text="@string/cancel"
                 android:textColor="@color/colorWhite"
                 android:background="@color/colorBlueOne"/>
+            <View
+                android:layout_width="2dp"
+                android:layout_height="match_parent"/>
             <Button
                 android:id="@+id/btn_submit"
                 android:layout_width="match_parent"
@@ -99,7 +104,7 @@
                 android:textAllCaps="false"
                 android:textColor="@color/colorWhite"
                 android:text="@string/submit"
-                android:background="@color/colorHeader"/>
+                android:background="@color/colorBlueOne"/>
 
 
 

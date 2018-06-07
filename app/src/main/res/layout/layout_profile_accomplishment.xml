@@ -7,7 +7,7 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:background="@color/colorBlackOne"
+        android:background="@color/colorGrayTwo"
         android:orientation="horizontal">
 
         <TextView
@@ -30,8 +30,8 @@
                 android:background="@android:color/transparent" />
 
             <ImageView
-                android:layout_width="20dp"
-                android:layout_height="20dp"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
                 android:layout_centerInParent="true"
                 android:src="@drawable/expand_section_icon" />
         </RelativeLayout>
@@ -76,8 +76,8 @@
                 android:background="@android:color/transparent" />
 
             <ImageView
-                android:layout_width="25dp"
-                android:layout_height="25dp"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
                 android:layout_centerInParent="true"
                 android:src="@drawable/pencil_edit_icon" />
         </RelativeLayout>
@@ -129,8 +129,8 @@
                 android:background="@android:color/transparent" />
 
             <ImageView
-                android:layout_width="25dp"
-                android:layout_height="25dp"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
                 android:layout_centerInParent="true"
                 android:src="@drawable/pencil_edit_icon" />
         </RelativeLayout>
@@ -182,8 +182,8 @@
                 android:background="@android:color/transparent" />
 
             <ImageView
-                android:layout_width="25dp"
-                android:layout_height="25dp"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
                 android:layout_centerInParent="true"
                 android:src="@drawable/pencil_edit_icon" />
         </RelativeLayout>
@@ -235,8 +235,8 @@
                 android:background="@android:color/transparent" />
 
             <ImageView
-                android:layout_width="25dp"
-                android:layout_height="25dp"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
                 android:layout_centerInParent="true"
                 android:src="@drawable/pencil_edit_icon" />
         </RelativeLayout>

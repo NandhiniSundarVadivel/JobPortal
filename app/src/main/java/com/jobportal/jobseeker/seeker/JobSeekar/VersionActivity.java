@@ -35,6 +35,7 @@ public class VersionActivity extends AppCompatActivity {
                 onBackPressed();
                 break;
             case R.id.btn_version_update:
+                btnVersionUpdate.setBackgroundColor(getResources().getColor(R.color.colorSignup));
                 break;
         }
     }

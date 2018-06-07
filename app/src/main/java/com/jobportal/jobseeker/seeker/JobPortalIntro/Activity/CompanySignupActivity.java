@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.text.Html;
+import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.view.WindowManager;
@@ -15,7 +16,8 @@ import android.widget.LinearLayout;
 import android.widget.ScrollView;
 import android.widget.TextView;
 
-import com.jobportal.jobseeker.seeker.Company.NavigationActivity;
+import com.jobportal.jobseeker.seeker.Company.MainActivityCompany;
+import com.jobportal.jobseeker.seeker.Global.Global;
 import com.jobportal.jobseeker.seeker.JobPortalIntroAdapter.AdapterCompanySize;
 import com.jobportal.jobseeker.seeker.JobPortalIntroModel.CompanySizeModel;
 import com.jobportal.jobseeker.seeker.R;
@@ -70,6 +72,9 @@ public class CompanySignupActivity extends AppCompatActivity {
     @BindView(R.id.txt_terms)
     TextView txtTerms;
     String terms = "<pre>I agree with <strong>Terms Of Use</strong> and <strong>Privacy Policy</strong></pre>";
+    String edt_cmp_name, edt_cmp_size, edt_cmp_phone, edt_cmp_email, edt_personnel_posi, edt_mobileno, edt_address_one, edt_address_two, edt_city, edt_pswd, edt_conf_pswd;
+    @BindView(R.id.linearthree)
+    LinearLayout linearthree;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -80,7 +85,7 @@ public class CompanySignupActivity extends AppCompatActivity {
         layoutManager.setOrientation(LinearLayoutManager.VERTICAL);
         recycleCmpnSize.setLayoutManager(new LinearLayoutManager(this));
         txtTerms.setText(Html.fromHtml(terms));
-
+        edtCompanySize.setEnabled(false);
         companySizeModels = new ArrayList<>();
         companySizeModels.add(new CompanySizeModel("1 to 9 Employees"));
         companySizeModels.add(new CompanySizeModel("10 to 19 Employees"));
@@ -93,8 +98,8 @@ public class CompanySignupActivity extends AppCompatActivity {
         adapterCompanySize = new AdapterCompanySize(companySizeModels, CompanySignupActivity.this, new AdapterCompanySize.CustomItemClickListener() {
             @Override
             public void onItemClick(View v, int position) {
-               String item = companySizeModels.get(position).getTitle();
-               Log.e("selecteditem",item);
+                String item = companySizeModels.get(position).getTitle();
+                Log.e("selecteditem", item);
                 edtCompanySize.setText(item);
                 linearCompanySize.setVisibility(View.GONE);
             }
@@ -110,13 +115,69 @@ public class CompanySignupActivity extends AppCompatActivity {
                 onBackPressed();
                 break;
             case R.id.btn_signup:
-                Intent intent = new Intent(CompanySignupActivity.this, NavigationActivity.class);
+                // callValidation();
+                btnSignup.setBackgroundColor(getResources().getColor(R.color.colorSignup));
+                Intent intent = new Intent(CompanySignupActivity.this, MainActivityCompany.class);
                 startActivity(intent);
                 break;
             case R.id.btn_down_arrow_cs:
                 linearCompanySize.setVisibility(View.VISIBLE);
                 break;
         }
+    }
+
+    /*Validatio Part*/
+    private void callValidation() {
+        boolean cancel = false;
+        edt_cmp_name = edtComopanyName.getText().toString().trim();
+        edt_cmp_size = edtCompanySize.getText().toString().trim();
+        edt_cmp_email = edtComopanyEmail.getText().toString().trim();
+        edt_cmp_phone = edtComopanyPhoneno.getText().toString().trim();
+        edt_personnel_posi = edtPerssonnelPosition.getText().toString().trim();
+        edt_mobileno = edtMobileNo.getText().toString().trim();
+        edt_address_one = edtAdderessOne.getText().toString().trim();
+        edt_address_two = edtAddressTwo.getText().toString().trim();
+        edt_city = edtCity.getText().toString().trim();
+        edt_pswd = edtPassword.getText().toString().trim();
+        edt_conf_pswd = edtConfirmPassword.getText().toString().trim();
+        if (TextUtils.isEmpty(edt_cmp_name)) {
+            Global.Toast(CompanySignupActivity.this, getString(R.string.cmp_name_valid));
+            cancel = true;
+        } else if (TextUtils.isEmpty(edt_cmp_size)) {
+            Global.Toast(CompanySignupActivity.this, getString(R.string.cmp_size_valid));
+            cancel = true;
+        } else if (TextUtils.isEmpty(edt_cmp_email)) {
+            Global.Toast(CompanySignupActivity.this, getString(R.string.cmp_email_valid));
+            cancel = true;
+        } else if (TextUtils.isEmpty(edt_cmp_phone)) {
+            Global.Toast(CompanySignupActivity.this, getString(R.string.cmp_phone_valid));
+            cancel = true;
+        } else if (TextUtils.isEmpty(edt_personnel_posi)) {
+            Global.Toast(CompanySignupActivity.this, getString(R.string.persnl_posi_valid));
+            cancel = true;
+        } else if (TextUtils.isEmpty(edt_mobileno)) {
+            Global.Toast(CompanySignupActivity.this, getString(R.string.mobile_no_valid));
+            cancel = true;
+        } else if (TextUtils.isEmpty(edt_address_one)) {
+            Global.Toast(CompanySignupActivity.this, getString(R.string.addres_one_valid));
+            cancel = true;
+        } else if (TextUtils.isEmpty(edt_address_two)) {
+            Global.Toast(CompanySignupActivity.this, getString(R.string.address_two_valid));
+            cancel = true;
+        } else if (TextUtils.isEmpty(edt_city)) {
+            Global.Toast(CompanySignupActivity.this, getString(R.string.city_valid));
+            cancel = true;
+        } else if (TextUtils.isEmpty(edt_pswd)) {
+            Global.Toast(CompanySignupActivity.this, getString(R.string.pswd_valid));
+            cancel = true;
+        } else if (!edt_pswd.equalsIgnoreCase(edt_conf_pswd)) {
+            Global.Toast(CompanySignupActivity.this, getString(R.string.cnf_pswd_valid));
+            cancel = true;
+        }
+        if (!cancel) {
+
+        }
+
     }
 
     @Override

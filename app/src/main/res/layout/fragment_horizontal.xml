@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/framelayout"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <View
+        android:id="@+id/viewGreen"
+        android:layout_width="5dp"
+        android:visibility="visible"
+        android:layout_height="match_parent"
+        android:layout_gravity="right"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/viewpage_green_color"/>
+    <View
+        android:id="@+id/viewRed"
+        android:layout_width="5dp"
+        android:layout_gravity="left"
+        android:visibility="visible"
+        android:layout_alignParentLeft="true"
+        android:layout_height="match_parent"
+        android:background="@drawable/viewpage_red_color"/>
+
+    <com.gigamole.infinitecycleviewpager.HorizontalInfiniteCycleViewPager
+        android:id="@+id/hicvp"
+        android:visibility="visible"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:icvp_interpolator="@android:anim/accelerate_decelerate_interpolator"
+        app:icvp_scroll_duration="250"
+        app:icvp_center_page_scale_offset="30dp"
+        app:icvp_min_page_scale_offset="5dp"
+        app:icvp_max_page_scale="0.8"
+        app:icvp_min_page_scale="0.55"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:nextFocusLeft="@color/colorBlue"
+        android:nextFocusRight="@color/colorSignup"
+
+        app:icvp_medium_scaled="false"/>
+
+
+
+
+    <!--
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:background="@android:color/transparent">
+
+            <View
+                android:id="@+id/viewGreen"
+                android:layout_width="5dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/viewpage_green_color"/>
+            <View
+                android:id="@+id/viewRed"
+                android:layout_width="5dp"
+                android:layout_gravity="right"
+                android:layout_height="match_parent"
+                android:background="@drawable/viewpage_red_color"/>
+
+
+
+            &lt;!&ndash;   <Button
+                   android:background="@android:color/transparent"
+                   android:layout_width="match_parent"
+                   android:layout_weight="1"
+                   android:layout_height="match_parent"
+                   android:id="@+id/btnright"/>
+               <Button
+                   android:background="@android:color/transparent"
+                   android:layout_weight="1"
+                   android:layout_width="match_parent"
+                   android:layout_height="match_parent"
+                   android:id="@+id/btnleft"/>&ndash;&gt;
+
+        </RelativeLayout>
+    -->
+
+
+    <!-- <android.support.v4.view.ViewPager
+         android:id="@+id/viewPagerbackground"
+         android:layout_width="match_parent"
+         android:layout_height="match_parent"
+         android:layout_gravity="center" />
+
+     <View
+         android:layout_width="match_parent"
+         android:layout_height="match_parent"
+        />
+
+     <android.support.v4.view.ViewPager
+         android:id="@+id/viewpagerTop"
+         android:layout_width="match_parent"
+         android:layout_height="match_parent"
+         android:layout_centerInParent="true"
+         android:clipToPadding="false"
+         android:paddingLeft="10dp"
+         android:paddingRight="10dp"
+         android:paddingTop="100dp"
+         android:paddingBottom="100dp"
+         android:layout_gravity="center" />-->
+
+</RelativeLayout>

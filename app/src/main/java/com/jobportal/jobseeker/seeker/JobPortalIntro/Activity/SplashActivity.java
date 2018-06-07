@@ -3,7 +3,6 @@ package com.jobportal.jobseeker.seeker.JobPortalIntro.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.ProgressBar;
@@ -42,18 +41,20 @@ public class SplashActivity extends AppCompatActivity {
             @Override
             public void run() {
                 try {
-                    Thread.sleep(1000);
+                    Thread.sleep(100);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
                 setProgressValue(progress + 10);
                 int value = progress+10;
                 if(value == 100){
-                    Intent intent = new Intent(SplashActivity.this,SplashPageActivity.class);
+                   // simpleProgressBar.setTop(100);
+
+                    Intent intent = new Intent(SplashActivity.this,SplashPageActivity.class);//SplashPageActivity
                     startActivity(intent);
                     finish();
                 }
-                Log.e("progress",value+"");
+
             }
         });
         thread.start();

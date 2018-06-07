@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    >
+   >
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -16,14 +16,26 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
-            android:layout_marginBottom="40dp"
+            android:layout_marginBottom="80dp"
             android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/imageCenter"
+                android:layout_width="130dp"
+                android:layout_height="130dp"
+                android:layout_gravity="center"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10dp"/>
 
             <TextView
                 android:id="@+id/txtTitle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="@dimen/header_text_2"
+                android:textSize="@dimen/big_text_one"
+                android:textStyle="bold"
                 android:textAlignment="center"
                 android:textColor="@color/colorWhite"
                  />

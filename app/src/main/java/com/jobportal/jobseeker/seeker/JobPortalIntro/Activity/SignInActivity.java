@@ -3,12 +3,14 @@ package com.jobportal.jobseeker.seeker.JobPortalIntro.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
-import com.jobportal.jobseeker.seeker.Company.NavigationActivity;
-import com.jobportal.jobseeker.seeker.JobSeekar.MainActivity;
+import com.jobportal.jobseeker.seeker.Company.MainActivityCompany;
+import com.jobportal.jobseeker.seeker.Global.Global;
+import com.jobportal.jobseeker.seeker.JobSeekar.MainActivityJobSeeker;
 import com.jobportal.jobseeker.seeker.R;
 
 import butterknife.BindView;
@@ -31,7 +33,7 @@ public class SignInActivity extends AppCompatActivity {
     Button btnGoogleplus;
     @BindView(R.id.btn_linkedin)
     Button btnLinkedin;
-    String page;
+    String page,edt_email,edt_pswd;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -54,11 +56,13 @@ public class SignInActivity extends AppCompatActivity {
             case R.id.btn_forget_pswd:
                 break;
             case R.id.btn_signip:
+                //callValidation();
+                btnSignip.setBackground(getResources().getDrawable(R.drawable.background_rounded_signup));
                 if(page.equalsIgnoreCase("1")) {
-                    Intent intent = new Intent(SignInActivity.this, MainActivity.class);
+                    Intent intent = new Intent(SignInActivity.this, MainActivityJobSeeker.class);
                     startActivity(intent);
                 }else {
-                    Intent intent = new Intent(SignInActivity.this, NavigationActivity.class);
+                    Intent intent = new Intent(SignInActivity.this, MainActivityCompany.class);
                     startActivity(intent);
                 }
                 break;
@@ -68,6 +72,25 @@ public class SignInActivity extends AppCompatActivity {
                 break;
             case R.id.btn_linkedin:
                 break;
+        }
+    }
+
+    /*Validation Part*/
+    private void callValidation() {
+        edt_email = edtEmailSignin.getText().toString();
+        edt_pswd = edtPasswordSignin.getText().toString();
+
+        boolean cancel = false;
+
+        if(TextUtils.isEmpty(edt_email)){
+            cancel = true;
+            Global.Toast(SignInActivity.this,getString(R.string.email_valid));
+        }else if(TextUtils.isEmpty(edt_pswd)){
+            cancel = true;
+            Global.Toast(SignInActivity.this,getString(R.string.pswd_valid));
+        }
+        if(!cancel){
+
         }
     }
 }

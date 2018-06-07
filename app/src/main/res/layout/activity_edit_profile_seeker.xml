@@ -416,23 +416,5 @@
     </ScrollView>
 
 
-    <LinearLayout
-        android:id="@+id/linearBootom"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:gravity="center"
-        android:layout_alignParentBottom="true"
-        android:layout_gravity="center"
-        android:background="@color/colorBlue">
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/submit"
-            android:textColor="@color/colorWhite"
-            android:textAlignment="center"
-            android:textSize="@dimen/normal_text"/>
-
-    </LinearLayout>
 
 </RelativeLayout>

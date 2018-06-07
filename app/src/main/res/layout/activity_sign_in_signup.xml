@@ -8,14 +8,14 @@
     tools:context="com.jobportal.jobseeker.seeker.JobPortalIntro.Activity.SignInSignupActivity">
 
     <LinearLayout
+        android:layout_above="@+id/linearBootom"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
         android:orientation="vertical">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="250dp"
             android:layout_gravity="center"
             android:orientation="vertical"
             android:gravity="center">
@@ -23,7 +23,7 @@
             <ImageView
                 android:layout_width="120dp"
                 android:layout_height="120dp"
-                android:src="@drawable/signinup_icon"/>
+                android:src="@drawable/sign_up_in_icon"/>
 
             <TextView
                 android:layout_width="match_parent"
@@ -42,8 +42,8 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="@dimen/margin_left_one"
-            android:layout_marginRight="@dimen/marging_right_one">
+            android:layout_marginLeft="@dimen/margin_left_three"
+            android:layout_marginRight="@dimen/marging_right_three">
 
             <Button
                 android:id="@+id/btn_signin"
@@ -51,7 +51,7 @@
                 android:textAllCaps="false"
                 android:textColor="@color/colorWhite"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="42dp"
                 android:background="@drawable/background_rounded_sp_two"/>
         </LinearLayout>
 
@@ -62,8 +62,8 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="@dimen/margin_left_one"
-            android:layout_marginRight="@dimen/marging_right_one">
+            android:layout_marginLeft="@dimen/margin_left_three"
+            android:layout_marginRight="@dimen/marging_right_three">
 
         <Button
             android:id="@+id/btn_signup"
@@ -71,13 +71,13 @@
             android:textColor="@color/colorWhite"
             android:textAllCaps="false"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/background_rounded_signup"/>
+            android:layout_height="42dp"
+            android:background="@drawable/background_rounded_sp_two"/>
         </LinearLayout>
 
         <View
             android:layout_width="match_parent"
-            android:layout_height="20dp"/>
+            android:layout_height="40dp"/>
 
 
 
@@ -114,6 +114,16 @@
 
         </LinearLayout>
 
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearBootom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_alignParentBottom="true">
+
         <!--social media -->
         <LinearLayout
             android:layout_width="match_parent"
@@ -139,9 +149,10 @@
                         android:layout_height="wrap_content"
                         android:background="@android:color/transparent"/>
                     <ImageView
-                        android:layout_width="50dp"
-                        android:layout_height="50dp"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
                         android:src="@drawable/fb_icon"
+                        android:layout_centerInParent="true"
                         android:layout_centerHorizontal="true"/>
                 </RelativeLayout>
 
@@ -161,9 +172,10 @@
                         android:layout_height="wrap_content"
                         android:background="@android:color/transparent"/>
                     <ImageView
-                        android:layout_width="50dp"
-                        android:layout_height="50dp"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
                         android:baselineAligned="false"
+                        android:layout_centerInParent="true"
                         android:layout_centerHorizontal="true"
                         android:src="@drawable/gplus_icon" />
                 </RelativeLayout>
@@ -183,8 +195,9 @@
                         android:layout_height="wrap_content"
                         android:background="@android:color/transparent"/>
                     <ImageView
-                        android:layout_width="50dp"
-                        android:layout_height="50dp"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_centerInParent="true"
                         android:layout_centerHorizontal="true"
                         android:src="@drawable/linked_in"/>
                 </RelativeLayout>
@@ -219,6 +232,5 @@
         </LinearLayout>
 
     </LinearLayout>
-
 
 </RelativeLayout>

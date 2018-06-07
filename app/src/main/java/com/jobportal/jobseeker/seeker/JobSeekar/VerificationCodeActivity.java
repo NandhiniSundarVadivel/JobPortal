@@ -1,5 +1,6 @@
 package com.jobportal.jobseeker.seeker.JobSeekar;
 
+import android.os.Build;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -37,6 +38,9 @@ public class VerificationCodeActivity extends AppCompatActivity {
                 onBackPressed();
                 break;
             case R.id.btn_enter_vc:
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
+                    btnEnterVc.setBackground(getResources().getDrawable(R.drawable.background_rounded_sp_two_darkblue));
+                }
                 break;
             case R.id.btn_resend_code:
                 break;

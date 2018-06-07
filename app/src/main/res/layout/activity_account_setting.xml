@@ -5,6 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@color/colorGrayTwo"
+
     tools:context="com.jobportal.jobseeker.seeker.JobSeekar.AccountSettingActivity">
 
     <!--header Layout-->
@@ -286,18 +288,24 @@
                             android:layout_height="match_parent">
 
                             <Button
+                                android:id="@+id/btn_save_changepsw"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
-                                android:background="@android:color/transparent" />
+                                android:text="@string/save"
+                                android:textAllCaps="false"
+                                android:textColor="@color/colorWhite"
+                                android:background="@color/colorLightBlue" />
 
+<!--
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_centerHorizontal="true"
                                 android:layout_centerVertical="true"
-                                android:text="@string/save"
+
                                 android:textAlignment="center"
                                 android:textColor="@color/colorWhite" />
+-->
                         </RelativeLayout>
                     </LinearLayout>
 
@@ -445,10 +453,16 @@
                             android:layout_height="match_parent">
 
                             <Button
+                                android:id="@+id/btn_updat_email"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
-                                android:background="@android:color/transparent" />
+                                android:background="@color/colorLightBlue"
+                                android:text="@string/update"
+                                android:textAlignment="center"
+                                android:textColor="@color/colorWhite"
+                                android:textAllCaps="false"/>
 
+<!--
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
@@ -457,6 +471,7 @@
                                 android:text="@string/update"
                                 android:textAlignment="center"
                                 android:textColor="@color/colorWhite" />
+-->
                         </RelativeLayout>
                     </LinearLayout>
 

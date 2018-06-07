@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#FF245D73</color>
+   <!-- <color name="colorPrimary">#FF245D73</color>
     <color name="colorPrimaryDark">#FF1A4958</color>
-    <color name="colorAccent">#FF1A4958</color>
+    <color name="colorAccent">#FF1A4958</color>-->
+
+     <color name="colorPrimary">#FF112D36</color>
+    <color name="colorPrimaryDark">#FF112D36</color>
+    <color name="colorAccent">#FF112D36</color>
 
 
     <color name="colorWhite">#FFFFFF</color>
@@ -15,25 +19,31 @@
     <color name="colorLightGray">#dcdcdc</color>
     <color name="colorGrayOne">#b3b3b3</color>
     <color name="colorGrayTwo">#f2f2f2</color>
+    <color name="colorLight">#47DCDCDC</color>
 
     <color name="colorLB">#FFEBEBEB</color>
     <color name="colorLBT">#FF5E5E5E</color>
     <color name="colorBO">#FF225B6F</color>
     <color name="colorBT">#FF2B85AF</color>
     <color name="colorGreen">#FF43AE4B</color>
-    <color name="colorBlueT">#FF4FB3E5</color>
+    <color name="colorBlueT">#87cefa</color>
     <color name="colorRedTwo">#FFC62D2D</color>
+    <color name="colorGreenone">#FF8FE63B</color>
 
     <color name="colorSpTwo">#FF2D2D2D</color>
     <color name="colorSignup">#FF193D4D</color>
-    <color name="colorBlue">#FF4FB3E6</color>
-    <color name="colorBlueOne">#FF30A5E1</color>
+    <color name="colorBlue">#87cefa</color>
+    <color name="colorBlueOne">#87cefa</color>
+    <color name="colorLightBlue">#87cefa</color>
 
     <color name="colorHeader">#FF2B557C</color>
+ <color name="colorDarkBlue">#FF3C5866</color>
     <color name="colorRed">#ff0000</color>
     <color name="colorBlackThree">#13DCDCDC</color>
     <color name="colorRed1">#FFEB7E7F</color>
 
+    <color name="colorSelect">#FFF9A503</color>
+    <color name="colorUnselect">#FFE3E3E3</color>
 
 
 </resources>

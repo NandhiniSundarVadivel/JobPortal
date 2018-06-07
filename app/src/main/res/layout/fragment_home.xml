@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical">
 
     <LinearLayout
+        android:layout_weight="1"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
@@ -19,10 +20,12 @@
         android:layout_height="50dp"
         android:orientation="horizontal">
 
+        <!--Search Location layout-->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="1">
+            android:layout_weight="1"
+            android:background="@drawable/background_box_setting">
 
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -58,14 +61,15 @@
             </RelativeLayout>
 
         </LinearLayout>
+        <!--Search job Layout-->
         <View
             android:layout_width="0.5dp"
-            android:layout_height="match_parent"
-            android:background="@color/colorBlackTwo"/>
+            android:layout_height="match_parent"/>
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
+            android:background="@drawable/background_box_setting"
             android:layout_gravity="center"
             android:gravity="center">
             <RelativeLayout
@@ -106,49 +110,108 @@
 
 
     </LinearLayout>
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="0.5dp"
-            android:background="@color/colorBlackTwo"/>
     </LinearLayout>
+        <!-- edit text layout apperara-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/edtSearchText"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:textSize="@dimen/normal_text_5"
+                android:paddingLeft="5dp"
+                android:layout_marginLeft="10dp"
+                android:background="@android:color/transparent"
+                android:inputType="text"
+                android:visibility="gone" />
+
+
+            <RelativeLayout
+                android:id="@+id/relativeLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone">
+
+
+                <fragment
+                    android:id="@+id/place_autocomplete"
+                    android:name="com.google.android.gms.location.places.ui.SupportPlaceAutocompleteFragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+
+                    />
+            </RelativeLayout>
+
+
+
+
+        </LinearLayout>
 
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_gravity="center"
-        android:gravity="center"
+
+         android:background="@color/colorGrayTwo"
         android:orientation="vertical">
 
-        <com.synnapps.carouselview.CarouselView
-            android:id="@+id/carouselView"
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="200dp"
-            app:fillColor="#FFFFFFFF"
-            app:pageColor="#00000000"
-            app:radius="6dp"
-            android:visibility="gone"
-            app:slideInterval="3000"
-            app:strokeColor="#FF777777"
-            app:strokeWidth="1dp"/>
+            android:layout_height="match_parent">
 
 
 
-        <android.support.v4.view.ViewPager
-            android:id="@+id/pager"
+        <com.jobportal.jobseeker.seeker.utils.NonScrollableViewPager
+            android:id="@+id/vp_main"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_above="@+id/linearOne"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:visibility="visible"
-            android:layout_margin="20dp"
-            />
+            android:layout_height="match_parent"/>
 
+        </RelativeLayout>
+
+        <!-- <FrameLayout
+             android:layout_width="match_parent"
+             android:layout_height="match_parent">
+
+
+
+
+
+
+             <android.support.v4.view.ViewPager
+                 android:id="@+id/viewPagerbackground"
+                 android:layout_width="match_parent"
+                 android:layout_height="match_parent"
+                 android:layout_gravity="center" />
+
+             <View
+                 android:layout_width="match_parent"
+                 android:layout_height="match_parent"
+                 />
+
+             <android.support.v4.view.ViewPager
+                 android:id="@+id/viewpagerTop"
+                 android:layout_width="match_parent"
+                 android:layout_height="match_parent"
+                 android:layout_centerInParent="true"
+
+                 android:clipToPadding="false"
+                 android:paddingLeft="10dp"
+                 android:paddingRight="10dp"
+                 android:paddingTop="100dp"
+                 android:paddingBottom="100dp"
+                 android:layout_gravity="center" />
+         </FrameLayout>
+ -->
+
+    </LinearLayout>
 
 
     </LinearLayout>
-    </LinearLayout>
+
+
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -180,7 +243,7 @@
             <ImageView
                 android:layout_width="25dp"
                 android:layout_height="25dp"
-                android:src="@drawable/star_icon"/>
+                android:src="@drawable/star1"/>
 
         </LinearLayout>
         <LinearLayout
@@ -191,9 +254,9 @@
             android:layout_weight="1">
 
             <ImageView
-                android:layout_width="25dp"
-                android:layout_height="25dp"
-                android:src="@drawable/undo_icon"/>
+                android:layout_width="26dp"
+                android:layout_height="26dp"
+                android:src="@drawable/undo_icon_1"/>
 
         </LinearLayout>
         <LinearLayout
@@ -212,4 +275,4 @@
 
     </LinearLayout>
 
-</RelativeLayout>
+</LinearLayout>

@@ -8,13 +8,12 @@
     tools:context="com.jobportal.jobseeker.seeker.JobSeekar.SetPreferencesActivity">
 
     <!-- Layout Header-->
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="50dp"
+        android:orientation="horizontal"
         android:background="@color/colorPrimary">
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
+
 
             <RelativeLayout
                 android:layout_width="50dp"
@@ -66,12 +65,13 @@
                     android:layout_height="20dp"
                     android:src="@drawable/upload_icon"
                     android:layout_centerVertical="true"
-                    android:layout_centerHorizontal="true"/>
+                    android:layout_centerHorizontal="true"
+                   />
 
             </RelativeLayout>
-        </RelativeLayout>
 
-    </LinearLayout>
+
+    </RelativeLayout>
 
 
     <LinearLayout

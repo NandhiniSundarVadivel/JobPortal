@@ -39,9 +39,13 @@ public class SavedJobsDetailActivity extends AppCompatActivity {
                 onBackPressed();
                 break;
             case R.id.btn_ignore:
+                btnIgnore.setBackgroundColor(getResources().getColor(R.color.colorSignup));
+                btnReach.setBackgroundColor(getResources().getColor(R.color.colorLightBlue));
                 onBackPressed();
                 break;
             case R.id.btn_reach:
+                btnIgnore.setBackgroundColor(getResources().getColor(R.color.colorLightBlue));
+                btnReach.setBackgroundColor(getResources().getColor(R.color.colorSignup));
                 onBackPressed();
                 break;
         }

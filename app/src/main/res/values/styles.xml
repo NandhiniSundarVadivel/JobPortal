@@ -68,6 +68,15 @@
         <item name="apc_colorNormalPressed">@color/colorBlackTwo</item>
     </style>
 
+    <style name="RatingBar.Yellow" parent="Theme.AppCompat">
+        <item name="colorControlNormal">@color/colorGrayOne</item>
+        <item name="colorControlActivated">@color/colorSelect</item>
+    </style>
+    <style name="customRatingBar"
+        parent="android:style/Widget.Material.RatingBar.Small">
+
+    </style>
+
    <!-- <style name="DialogTheme" parent="Theme.AppCompat.Light.Dialog">
         <item name="colorAccent">@color/colorPrimary</item>
     </style>-->

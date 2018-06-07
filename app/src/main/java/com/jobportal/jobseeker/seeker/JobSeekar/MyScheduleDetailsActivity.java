@@ -1,8 +1,11 @@
 package com.jobportal.jobseeker.seeker.JobSeekar;
 
 import android.app.Dialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
+import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -21,7 +24,8 @@ public class MyScheduleDetailsActivity extends AppCompatActivity {
     Button btnJobBuuble;
     @BindView(R.id.btn_delete_plan)
     Button btnDeletePlan;
-
+    long lastDown;
+    long lastDuration;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -36,8 +40,11 @@ public class MyScheduleDetailsActivity extends AppCompatActivity {
                 onBackPressed();
                 break;
             case R.id.btn_job_buuble:
+                Intent intent = new Intent(MyScheduleDetailsActivity.this,ChatActivity.class);
+                startActivity(intent);
                 break;
             case R.id.btn_delete_plan:
+                btnDeletePlan.setBackgroundColor(getResources().getColor(R.color.colorSignup));
                 callDeleteDialog();
 
                 break;
@@ -50,20 +57,55 @@ public class MyScheduleDetailsActivity extends AppCompatActivity {
         dialog.setContentView(R.layout.dialog_of_schedule_delete);
         dialog.show();
         EditText edit_msg = (EditText)dialog.findViewById(R.id.edt_message);
-        Button btnCancel = (Button)dialog.findViewById(R.id.btn_cancel);
-        Button btnSubmit = (Button)dialog.findViewById(R.id.btn_submit);
-        btnCancel.setOnClickListener(new View.OnClickListener() {
+        final Button btnCancel = (Button)dialog.findViewById(R.id.btn_cancel);
+        final Button btnSubmit = (Button)dialog.findViewById(R.id.btn_submit);
+
+        btnCancel.setOnTouchListener(new View.OnTouchListener() {
             @Override
-            public void onClick(View v) {
-                dialog.dismiss();
+            public boolean onTouch(View v, MotionEvent event) {
+                if(event.getAction() == MotionEvent.ACTION_DOWN) {
+                    lastDown = System.currentTimeMillis();
+                    Log.e("click","1");
+                    btnCancel.setBackgroundColor(getResources().getColor(R.color.colorSignup));
+                } else if (event.getAction() == MotionEvent.ACTION_UP) {
+                    lastDuration = System.currentTimeMillis() - lastDown;
+                    Log.e("click","2");
+                    dialog.dismiss();
+                }
+
+                return true;
             }
         });
-        btnSubmit.setOnClickListener(new View.OnClickListener() {
+        btnSubmit.setOnTouchListener(new View.OnTouchListener() {
             @Override
-            public void onClick(View v) {
-                dialog.dismiss();
+            public boolean onTouch(View v, MotionEvent event) {
+                if(event.getAction() == MotionEvent.ACTION_DOWN) {
+                    lastDown = System.currentTimeMillis();
+                    Log.e("click","1");
+                    btnSubmit.setBackgroundColor(getResources().getColor(R.color.colorSignup));
+                } else if (event.getAction() == MotionEvent.ACTION_UP) {
+                    lastDuration = System.currentTimeMillis() - lastDown;
+                    Log.e("click","2");
+                    dialog.dismiss();
+                }
+
+                return true;
             }
         });
+       /* btnCancel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                dialog.cancel();
+            }
+        });*/
+     /*   btnSubmit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                btnSubmit.setBackgroundColor(getResources().getColor(R.color.colorHeader));
+                dialog.dismiss();
+            }
+        });*/
     }
 
     @Override

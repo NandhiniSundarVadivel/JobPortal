@@ -1,6 +1,7 @@
 package com.jobportal.jobseeker.seeker.JobSeekar;
 
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -36,6 +37,9 @@ public class VerifyProfileActivity extends AppCompatActivity {
                 onBackPressed();
                 break;
             case R.id.btn_submit_VP:
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
+                    btnSubmitVP.setBackground(getResources().getDrawable(R.drawable.background_rounded_sp_two_darkblue));
+                }
                 Intent intentVC = new Intent(VerifyProfileActivity.this,VerificationCodeActivity.class);
                 startActivity(intentVC);
                 break;

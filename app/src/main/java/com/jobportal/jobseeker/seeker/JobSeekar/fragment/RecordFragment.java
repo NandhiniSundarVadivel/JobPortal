@@ -50,7 +50,7 @@ public class RecordFragment extends Fragment {
     private void setupViewPager(ViewPager viewPager) {
         ViewPagerAdapter adapter = new ViewPagerAdapter(getChildFragmentManager());
         adapter.addFragment(new AppliedFragemnt(), "Applied");
-        adapter.addFragment(new AppliedFragemnt(), "Reached");
+        adapter.addFragment(new ReachedFragemnt(), "Reached");
         viewPager.setAdapter(adapter);
     }
 

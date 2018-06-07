@@ -27,6 +27,7 @@
                 android:layout_height="50dp"
                 android:layout_gravity="center"
                 android:gravity="center"
+                android:textColor="@color/colorBlack"
                 android:text="@string/delete_account"
                 android:textAlignment="center"/>
 
@@ -34,7 +35,7 @@
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:background="@color/colorBlackOne"/>
+                android:background="@color/colorGrayTwo"/>
 
         </LinearLayout>
 
@@ -72,21 +73,26 @@
             <Button
                 android:id="@+id/btn_cancel_delete"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:textColor="@color/colorWhite"
                 android:textSize="@dimen/normal_text"
+                android:textAllCaps="false"
                 android:background="@color/colorBlue"
                 android:text="@string/cancel"/>
+            <View
+                android:layout_width="2dp"
+                android:layout_height="match_parent"/>
             <Button
                 android:id="@+id/btn_proceed_delete"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:textSize="@dimen/normal_text"
                 android:text="@string/proceed"
+                android:textAllCaps="false"
                 android:textColor="@color/colorWhite"
-                android:background="@color/colorHeader"/>
+                android:background="@color/colorLightBlue"/>
 
         </LinearLayout>
 

@@ -10,7 +10,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:background="@color/colorPrimary"
+        android:background="@color/colorLightBlue"
         android:orientation="horizontal">
 
         <RelativeLayout
@@ -43,10 +43,21 @@
 
     <!--detail page-->
 
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:background="@color/colorLightBlue"
+        >
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/s_icon"
+        android:alpha="0.1"
+        android:scaleType="fitXY"/>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/colorPrimary"
         android:orientation="vertical">
 
     <LinearLayout
@@ -60,7 +71,7 @@
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:layout_margin="10dp"
-            android:src="@drawable/placeholder_person"/>
+            android:src="@drawable/s_icon"/>
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -170,6 +181,7 @@
     </LinearLayout>
 
     </LinearLayout>
+    </RelativeLayout>
 
     <!--job detail-->
 
@@ -309,7 +321,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="@color/colorAccent"
+            android:background="@color/colorBlueT"
             android:text="@string/reach"
             android:textColor="@color/colorWhite"
             android:textAllCaps="false"/>

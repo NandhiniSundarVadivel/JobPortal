@@ -3,16 +3,26 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="match_parent"
+    android:layout_gravity="center"
+    android:gravity="center"
+    android:background="@color/colorGrayTwo"
+
     android:layout_height="match_parent">
 
     <LinearLayout
         android:id="@+id/linearOne"
         android:layout_width="match_parent"
-        android:layout_height="45dp">
+        android:layout_height="45dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_margin="8dp"
+      >
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:background="@drawable/background_box_white"
+            >
 
             <Button
                 android:layout_width="match_parent"
@@ -23,7 +33,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
-                android:text="Please Seletc Job"
+                android:text="Please Select Job"
                 android:textColor="@color/colorBlackOne"
                 android:textAlignment="center"/>
             <ImageView
@@ -44,6 +54,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
     <LinearLayout
+        android:id="@+id/linearItem"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
@@ -53,11 +64,43 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="150dp"
+        android:layout_gravity="center"
+        android:gravity="center"
         android:orientation="horizontal">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:gravity="center">
+            <include
+                layout="@layout/home_dashboard_item"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:gravity="center">
+            <include
+                layout="@layout/home_dashboard_item"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
             android:layout_weight="1">
             <include
                 layout="@layout/home_dashboard_item"/>
@@ -65,6 +108,8 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
             android:layout_weight="1">
             <include
                 layout="@layout/home_dashboard_item"/>
@@ -75,33 +120,54 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="150dp"
+        android:layout_gravity="center"
+        android:gravity="center"
         android:orientation="horizontal">
+        <View
+            android:layout_width="5dp"
+            android:layout_height="match_parent"/>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
             android:layout_weight="1">
             <include
-                layout="@layout/home_dashboard_item"/>
+                layout="@layout/home_dashboard_item_unselect"/>
         </LinearLayout>
+        <View
+            android:layout_width="15dp"
+            android:layout_height="match_parent"/>
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
             android:layout_weight="1">
             <include
-                layout="@layout/home_dashboard_item"/>
+                layout="@layout/home_dashboard_item_unselect"/>
         </LinearLayout>
+        <View
+            android:layout_width="8dp"
+            android:layout_height="match_parent"/>
 
     </LinearLayout>
-
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="5dp"/>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="150dp"
+        android:layout_gravity="center"
+        android:gravity="center"
         android:orientation="horizontal">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
             android:layout_weight="1">
             <include
                 layout="@layout/home_dashboard_item"/>
@@ -109,27 +175,8 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1">
-            <include
-                layout="@layout/home_dashboard_item"/>
-        </LinearLayout>
-
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="150dp"
-        android:orientation="horizontal">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1">
-            <include
-                layout="@layout/home_dashboard_item"/>
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
             android:layout_weight="1">
             <include
                 layout="@layout/home_dashboard_item"/>

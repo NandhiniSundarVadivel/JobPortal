@@ -17,7 +17,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="40dp"
-            android:text="November"
+            android:text="November, 2018"
             android:background="@color/colorDarkGray"
             android:textColor="@color/colorWhite"
             android:gravity="center"
@@ -40,14 +40,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
             <include
-                layout="@layout/item_my_schedules"/>
+                layout="@layout/item_my_schedules_one"/>
             </LinearLayout>
         </LinearLayout>
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="40dp"
-            android:text="December"
+            android:text="December, 2018"
             android:background="@color/colorDarkGray"
             android:textColor="@color/colorWhite"
             android:gravity="center"
@@ -63,7 +63,7 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/linearThree">
             <include
-                layout="@layout/item_my_schedules"/>
+                layout="@layout/item_my_schedules_two"/>
             </LinearLayout>
 
             <LinearLayout
@@ -72,7 +72,7 @@
                 android:layout_height="wrap_content">
 
             <include
-                layout="@layout/item_my_schedules"/>
+                layout="@layout/item_my_schedules_three"/>
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>

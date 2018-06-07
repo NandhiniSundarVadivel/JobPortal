@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:gravity="center"
+    android:background="@android:color/transparent"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:orientation="vertical"
+        android:background="@drawable/background_box_setting">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:text="@string/reschedule_end_time"
+            android:textAlignment="center"/>
+
+            <View
+                android:layout_width="250dp"
+                android:layout_height="0.5dp"
+                android:layout_gravity="center"
+                android:background="@color/colorGrayTwo"/>
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textAlignment="center"
+                    android:text="Sun 31 Dec"/>
+
+
+                <TextView
+                    android:layout_width="50dp"
+                    android:layout_height="25dp"
+                    android:text="11"/>
+                <TextView
+                    android:layout_width="50dp"
+                    android:layout_height="25dp"
+                    android:text="20"/>
+                <TextView
+                    android:layout_width="50dp"
+                    android:layout_height="25dp"
+                    android:text=""/>
+                <TextView
+                    android:layout_width="50dp"
+                    android:layout_height="25dp"
+                   />
+
+
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="270dp"
+                android:layout_height="0.5dp"
+                android:layout_gravity="center"
+                android:background="@color/colorBlackOne"/>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+
+                <TextView
+                    android:layout_width="188dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="Mon 1 Jan"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorBlack" />
+
+
+                <TextView
+                    android:layout_width="50dp"
+                    android:layout_height="25dp"
+                    android:textColor="@color/colorBlack"
+                    android:text="12"/>
+                <TextView
+                    android:layout_width="50dp"
+                    android:layout_height="25dp"
+                    android:textColor="@color/colorBlack"
+                    android:text="45"/>
+                <TextView
+                    android:layout_width="50dp"
+                    android:layout_height="25dp"
+                    android:text="Am"/>
+                <TextView
+                    android:layout_width="50dp"
+                    android:layout_height="25dp"
+                    android:textColor="@color/colorBlack"
+                    />
+
+
+            </LinearLayout>
+            <View
+                android:layout_width="270dp"
+                android:layout_height="0.5dp"
+                android:layout_gravity="center"
+                android:background="@color/colorBlackOne"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textAlignment="center"
+                    android:text="Tue 18 June"/>
+
+
+                <TextView
+                    android:layout_width="50dp"
+                    android:layout_height="25dp"
+                    android:text="1"/>
+                <TextView
+                    android:layout_width="50dp"
+                    android:layout_height="25dp"
+                    android:text="20"/>
+                <TextView
+                    android:layout_width="50dp"
+                    android:layout_height="25dp"
+                    android:text="PM"/>
+
+                <TextView
+                    android:layout_width="50dp"
+                    android:layout_height="25dp"
+                   />
+
+            </LinearLayout>
+            <View
+                android:layout_width="270dp"
+                android:layout_height="0.5dp"
+                android:layout_gravity="center"
+                android:background="@color/colorBlackOne"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textAlignment="center"
+                    android:text="wed 19 June"/>
+
+
+                <TextView
+                    android:layout_width="50dp"
+                    android:layout_height="25dp"
+                    android:text="3"/>
+                <TextView
+                    android:layout_width="50dp"
+                    android:layout_height="25dp"
+                    android:text="20"/>
+                <TextView
+                    android:layout_width="50dp"
+                    android:layout_height="25dp"
+                    android:text=""/>
+
+                <TextView
+                    android:layout_width="50dp"
+                    android:layout_height="25dp"
+                    />
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_cancel"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/cancel"
+                android:textAlignment="center"
+                android:layout_weight="1"
+                android:textAllCaps="false"
+                android:textColor="@color/colorWhite"
+                android:background="@color/colorLightBlue"/>
+            <View
+                android:layout_width="2dp"
+                android:layout_height="match_parent"/>
+
+            <Button
+                android:id="@+id/btn_set"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/set"
+                android:textAllCaps="false"
+                android:textAlignment="center"
+                android:layout_weight="1"
+                android:textColor="@color/colorWhite"
+                android:background="@color/colorLightBlue"/>
+
+
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+    </LinearLayout>

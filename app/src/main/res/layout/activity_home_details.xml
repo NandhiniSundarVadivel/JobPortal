@@ -6,169 +6,14 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context="com.jobportal.jobseeker.seeker.JobSeekar.HomeDetailsActivity">
-  <!--  <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:background="@color/colorBlue"
-        android:orientation="horizontal">
 
-        <RelativeLayout
-            android:layout_width="50dp"
-            android:layout_height="50dp">
-
-            <Button
-                android:id="@+id/btn_back"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:background="@android:color/transparent" />
-
-            <ImageView
-                android:layout_width="20dp"
-                android:layout_height="20dp"
-                android:layout_centerInParent="true"
-                android:src="@drawable/back_icon" />
-        </RelativeLayout>
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:text=""
-            android:textColor="@color/colorWhite"
-            android:textSize="@dimen/header_text" />
-
-
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="150dp"
-        android:background="@color/colorBlue"
-        android:orientation="horizontal">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:layout_gravity="center"
-            android:gravity="center">
-
-            <ImageView
-                android:layout_width="100dp"
-                android:layout_height="150dp"
-                android:src="@drawable/s_icon"/>
-
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="0.5"
-            android:orientation="vertical">
-
-            <TextView
-                android:id="@+id/txt_developer_title"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="App Developer"
-                android:textColor="@color/colorWhite"
-                android:textSize="@dimen/header_text_1"/>
-
-            <TextView
-                android:id="@+id/txt_developer_title_2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="szfzdfdffds"
-                android:textColor="@color/colorWhite"
-                android:textSize="@dimen/header_text_1"/>
-            <TextView
-                android:id="@+id/txt_developer_title_3"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textColor="@color/colorWhite"
-                android:text="szfzdfdffds"
-                android:textSize="@dimen/header_text_1"/>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:layout_gravity="center"
-                android:gravity="center"
-                android:orientation="horizontal">
-
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1">
-
-                    <ImageView
-                        android:layout_width="20dp"
-                        android:layout_height="20dp"
-                        android:src="@drawable/check_icon"/>
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="Verified User"
-                        android:textColor="@color/colorWhite"
-                        android:textSize="@dimen/normal_midle"
-                        android:paddingLeft="8dp"/>
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1">
-
-                    <ImageView
-                        android:layout_width="20dp"
-                        android:layout_height="20dp"
-                        android:src="@drawable/email_vf_icon"/>
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="Verified Email"
-                        android:textColor="@color/colorWhite"
-                        android:textSize="@dimen/normal_midle"
-                        android:paddingLeft="8dp"/>
-
-                </LinearLayout>
-
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="35dp"
-                android:layout_gravity="center"
-                android:orientation="horizontal">
-
-                <ImageView
-                    android:layout_width="20dp"
-                    android:layout_height="20dp"
-                    android:src="@drawable/location_two_icon"/>
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Limassol, Cyprus"
-                    android:paddingLeft="8dp"
-                    android:textColor="@color/colorWhite"/>
-
-            </LinearLayout>
-
-        </LinearLayout>
-
-
-    </LinearLayout>-->
 
 
     <!--header-->
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:background="@color/colorPrimary"
+        android:background="@color/colorLightBlue"
         android:orientation="horizontal">
 
         <RelativeLayout
@@ -191,21 +36,33 @@
         <TextView
             android:id="@+id/txtTitle"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
             android:layout_weight="1"
             android:gravity="center"
             android:text="App Developer"
             android:textColor="@color/colorWhite"
             android:textSize="@dimen/header_text" />
 
-    </LinearLayout>
+    </RelativeLayout>
 
     <!--detail page-->
 
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:background="@color/colorLightBlue"
+        >
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/s_icon"
+        android:alpha="0.1"
+        android:scaleType="fitXY"/>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/colorPrimary"
+
         android:orientation="vertical">
 
         <LinearLayout
@@ -329,6 +186,7 @@
         </LinearLayout>
 
     </LinearLayout>
+    </RelativeLayout>
 
     <!--job detail-->
 

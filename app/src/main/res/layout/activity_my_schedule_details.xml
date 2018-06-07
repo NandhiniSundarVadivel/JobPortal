@@ -14,7 +14,8 @@
         android:layout_height="match_parent">
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="180dp"
+        android:layout_height="200dp"
+
         android:orientation="vertical"
         android:background="@color/colorBlueOne">
 
@@ -91,11 +92,21 @@
         </LinearLayout>
 
 
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+          >
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/s_icon"
+                android:alpha="0.1"
+                android:scaleType="fitXY"/>
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:layout_gravity="center"
+
             android:gravity="center">
 
             <de.hdodenhof.circleimageview.CircleImageView
@@ -115,7 +126,7 @@
 
 
         </LinearLayout>
-
+        </RelativeLayout>
 
     </LinearLayout>
 
@@ -271,31 +282,23 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:background="@color/colorBlueT"
         android:layout_alignParentBottom="true">
 
 
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
+
 
 
             <Button
                 android:id="@+id/btn_delete_plan"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@android:color/transparent"/>
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
-                android:layout_centerVertical="true"
                 android:text="@string/delete_plan"
                 android:textAlignment="center"
-                android:textColor="@color/colorWhite"/>
+                android:textAllCaps="false"
+                android:textColor="@color/colorWhite"
+                android:background="@color/colorBlueT"/>
 
-        </RelativeLayout>
+
 
 
 

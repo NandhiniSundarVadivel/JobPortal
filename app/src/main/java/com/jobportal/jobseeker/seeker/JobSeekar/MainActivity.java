@@ -11,6 +11,7 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
+import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
@@ -19,6 +20,7 @@ import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import com.jobportal.jobseeker.seeker.Company.InboxCompanyActivity;
 import com.jobportal.jobseeker.seeker.JobSeekar.fragment.HomeFragment;
 import com.jobportal.jobseeker.seeker.JobSeekar.fragment.LettersFragment;
 import com.jobportal.jobseeker.seeker.JobSeekar.fragment.MyScheduleFragment;
@@ -113,7 +115,7 @@ public class MainActivity extends AppCompatActivity
         }
     }
 
-   /* @Override
+    @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.main, menu);
@@ -133,7 +135,7 @@ public class MainActivity extends AppCompatActivity
         }
 
         return super.onOptionsItemSelected(item);
-    }*/
+    }
 
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
@@ -221,7 +223,7 @@ public class MainActivity extends AppCompatActivity
     @OnClick(R.id.relative_chat)
     public void onViewClicked() {
         Log.e("btnchat", "yes");
-        Intent intentChat = new Intent(MainActivity.this, ChatActivity.class);
+        Intent intentChat = new Intent(MainActivity.this, InboxCompanyActivity.class);
         startActivity(intentChat);
 
     }

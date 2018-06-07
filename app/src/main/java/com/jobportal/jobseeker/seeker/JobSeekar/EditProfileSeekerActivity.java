@@ -44,8 +44,7 @@ public class EditProfileSeekerActivity extends AppCompatActivity {
     EditText editWebsite;
     @BindView(R.id.linearOne)
     LinearLayout linearOne;
-    @BindView(R.id.linearBootom)
-    LinearLayout linearBootom;
+
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -54,7 +53,7 @@ public class EditProfileSeekerActivity extends AppCompatActivity {
         ButterKnife.bind(this);
     }
 
-    @OnClick({R.id.btn_back, R.id.btn_upload,R.id.linearBootom})
+    @OnClick({R.id.btn_back, R.id.btn_upload})
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.btn_back:
@@ -63,9 +62,7 @@ public class EditProfileSeekerActivity extends AppCompatActivity {
             case R.id.btn_upload:
                 onBackPressed();
                 break;
-            case R.id.linearBootom:
-                onBackPressed();
-                break;
+
         }
     }
 

@@ -5,6 +5,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.jobportal.jobseeker.seeker.JobPortalIntroModel.CompanySizeModel;
@@ -27,12 +28,15 @@ public class AdapterCompanySize extends RecyclerView.Adapter<AdapterCompanySize.
 
 
         TextView txt_company_size;
+        LinearLayout linearone;
 
 
         public MyViewHolder(View itemView) {
             super(itemView);
             context = itemView.getContext();
             txt_company_size = (TextView) itemView.findViewById(R.id.txt_complany_size);
+            linearone = (LinearLayout)itemView.findViewById(R.id.linearOne);
+
 
 
 
@@ -70,6 +74,8 @@ public class AdapterCompanySize extends RecyclerView.Adapter<AdapterCompanySize.
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                holder.linearone.setBackgroundColor(context.getResources().getColor(R.color.colorBlue));
+              //  holder.itemView.setBackgroundColor(context.getResources().getColor(R.color.colorBlue));
                 listener.onItemClick(v, listPosition);
             }
         });

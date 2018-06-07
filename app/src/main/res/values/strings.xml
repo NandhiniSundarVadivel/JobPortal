@@ -1,6 +1,6 @@
 <resources>
-    <string name="app_name">Seeker</string>
-
+    <string name="app_name">JobPortal</string>
+    <string name="google_maps_key">AIzaSyATmFLxTSTKvL65UnnYIfoJUiVPiCJcM6c</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
@@ -20,6 +20,7 @@
 
     <!--navigation drawer activity-->
     <string name="home">HOME</string>
+    <string name="home_small">Home</string>
     <string name="saved_jobs">SAVED JOBS</string>
     <string name="saved_jobs_small">Saved Jobs</string>
 
@@ -87,20 +88,21 @@
     <string name="schedule">Schedule</string>
     <string name="schedule_caps">SCHEDULE</string>
     <string name="about_us">About US</string>
+    <string name="about_us_small">About Us</string>
     <string name="seniority_level">Seniority Level :</string>
     <string name="required_skill">Required Skill :</string>
-    <string name="year_of_experience">Year of Experience :</string>
+    <string name="year_of_experience">Years of Experience :</string>
     <string name="employment_type">Employment Type :</string>
+    <string name="employment_type_hint">Employment Type</string>
     <string name="ignore">Ignore</string>
     <string name="reach">Reach</string>
     <string name="view">View</string>
     <string name="company_email">Company Email</string>
     <string name="address">Address</string>
-    <string name="company_details">Company Details</string>
+
     <string name="scientroncs">Scientroncs</string>
     <string name="app_developer">App Developer :</string>
     <string name="stage_1_phone_interview">Stage 1 : Phone Interview</string>
-    <string name="delete_plan">Delete Plan</string>
     <string name="you_want_to_delete">Are you sure you want to delete ?</string>
     <string name="please_leave_a_message_to_scientronics_limited">Please leave a message to Scientronics Limited</string>
     <string name="submit">Submit</string>
@@ -127,7 +129,7 @@
     <string name="terms_amp_conditions"><![CDATA[Terms & Conditions]]></string>
     <string name="offer_letter">Offer Letter</string>
     <string name="change_password">Change Password</string>
-    <string name="change_password_sub_title">Passwords are case-sensetive and must be least \n6 characters</string>
+    <string name="change_password_sub_title">Passwords are case-sensetive and must be at least \n6 characters</string>
     <string name="current">Current</string>
     <string name="new_password">New Password</string>
     <string name="new_text">New</string>
@@ -147,10 +149,10 @@
     <string name="job_field">Job Field</string>
     <string name="cyprus">Cyprus</string>
     <string name="verify_profile">Verify Profile</string>
-    <string name="email_verification_text">Enter your email address to recieve \n a verification code</string>
+    <string name="email_verification_text">Enter your email address to receive \n a verification code</string>
     <string name="enter_email">Enter Email</string>
     <string name="verification_code">Please enter the verification code sent \n to your email</string>
-    <string name="enter_verificaation_code">Enter Verificaation Code</string>
+    <string name="enter_verificaation_code">Enter Verification Code</string>
     <string name="enter">Enter</string>
     <string name="resend_verification_code">Resend Verification Code</string>
     <string name="version">Version</string>
@@ -159,17 +161,27 @@
     <string name="search_job">Search Job</string>
     <string name="update">Update</string>
     <string name="browse_candidates">BROWSE CANDIDATES</string>
+
+    <string name="browse_candidates_small">Browse Candidates</string>
+
     <string name="saved_shortlisted_profiles">SAVED / SHORTLISTED PROFILES</string>
     <string name="create_a_job">CREATE A JOB</string>
+    <string name="create_a_job_small">Create a Job</string>
     <string name="job_listing">JOB LISTING</string>
+    <string name="job_listing_small">Job Listing</string>
     <string name="stages">STAGES</string>
+    <string name="stages_small">Stages</string>
+    <string name="saved_title">Saved</string>
+    <string name="shortlist_title">Shortlisted</string>
 
 
     <string-array name="begain_title">
-        <item>Reach the right pepople, \n get closer to your dream job</item>
-        <item>Reach the right pepople, \n get closer to your dream job</item>
-        <item>Reach the right pepople, \n get closer to your dream job</item>
-        <item>Reach the right pepople, \n get closer to your dream job</item>
+        <item>Reach the right people, \n get closer to your dream job</item>
+        <item>Set up your profile or simply \n upload your CV.</item>
+        <item>Use swiping to like or pass a job</item>
+        <item>If the company likes you back, you.ve been reached!</item>
+        <item>Once reached, chat instantly with your potential \n employer and schedule your meetings.</item>
+        <item>Get the appropriate notifications through be-reach to enhance \n your user experience</item>
     </string-array>
     <string-array name="begain_title_two">
         <item>Android Developer</item>
@@ -180,4 +192,54 @@
 
     <string name="drawer_open">Open</string>
     <string name="drawer_close">Close</string>
+    <string name="shortlist">Shortlist</string>
+    <string name="reconsider">Reconsider</string>
+    <string name="delete">Delete</string>
+    <string name="igonred_caps">IGONRED</string>
+    <string name="company_details">Company Details</string>
+    <string name="company_size">Company Size</string>
+    <string name="year_founded">Year Founded</string>
+    <string name="import_candidate">Import Candidate</string>
+    <string name="job_title">Job Title</string>
+    <string name="seniorty_level">Seniority Level</string>
+    <string name="required_skills">Required Skill</string>
+    <string name="clear">Clear</string>
+    <string name="stop">Stop</string>
+    <string name="advance">Advance</string>
+    <string name="reject">Reject</string>
+    <string name="make_an_offer">Make an Offer</string>
+    <string name="candidate_name">Candidate Name :</string>
+    <string name="job_position">Job Position :</string>
+    <string name="salary">Salary :</string>
+    <string name="personal_message">Personal Message :</string>
+    <string name="review_amp_send"><![CDATA[Review & Send]]></string>
+    <string name="send">Send</string>
+    <string name="rejection_letter">Rejection Letter</string>
+    <string name="reschedule">Reschedule</string>
+    <string name="delete_plan">Delete Plan</string>
+    <string name="set">Set</string>
+    <string name="reschedule_end_time">Reschedule End Time</string>
+    <string name="reschedule_start_time">Reschedule Start Time</string>
+    <string name="leave_a_message_to_maria_theofanous">Leave a message to Maria Theofanous</string>
+    <string name="inbox">Inbox</string>
+
+
+    <!--Validation Message-->
+    <string name="email_valid">Email is Empty</string>
+    <string name="pswd_valid">Password id Empty</string>
+    <string name="cmp_name_valid">Company Name is Empty</string>
+    <string name="cmp_size_valid">Company Size is Empty</string>
+    <string name="cmp_email_valid">Company Email is Empty</string>
+    <string name="cmp_phone_valid">Company Pnone Number is Empty</string>
+    <string name="persnl_posi_valid">Personnel Position is Empty</string>
+    <string name="mobile_no_valid">Mobile Number is Empty</string>
+    <string name="addres_one_valid">Address One is Empty</string>
+    <string name="address_two_valid">AAddress Two is Empty</string>
+    <string name="city_valid">City is Empty</string>
+    <string name="cnf_pswd_valid">Confirm Password is Miss Match</string>
+    <string name="name_valid">Name is Empty</string>
+    <string name="surname_valid">Surname is Empty</string>
+    <string name="age_valid">Age is Empty</string>
+    <string name="aboutus_empty">Type Any Text</string>
+
 </resources>

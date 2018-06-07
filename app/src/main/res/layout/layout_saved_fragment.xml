@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_gravity="center"
+            android:scaleType="fitXY"
+            android:src="@drawable/placeholder_image_two"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="10dp">
+
+            <TextView
+                android:textSize="@dimen/normal_text_5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorBlackThre"
+                android:text="Marios Papakonstantinou 25 - PhD"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"/>
+            <TextView
+                android:textSize="@dimen/normal_text_5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="KPMG Specialist"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:textSize="@dimen/normal_text_3"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorBlackTwo"
+                android:text="Laranca, Cyprus"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/btn_delete"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:text="Delete"
+                android:textAllCaps="false"
+                android:textColor="@color/colorWhite"
+               android:background="@color/colorRed1" />
+            <Button
+                android:id="@+id/btn_report"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:textAllCaps="false"
+                android:textColor="@color/colorWhite"
+                android:text="Report"
+                android:background="@color/colorGrayOne"/>
+
+
+        </LinearLayout>
+<!--
+        <RelativeLayout
+            android:id="@+id/rel_cancel"
+            android:layout_width="25dp"
+            android:layout_height="25dp">
+
+            <ImageView
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/cancel_icon"/>
+        </RelativeLayout>
+-->
+
+    </LinearLayout>
+
+
+</LinearLayout>

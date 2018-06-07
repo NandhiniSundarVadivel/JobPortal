@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:gravity="center"
+    android:background="@drawable/background_stroke_white"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:orientation="horizontal">
+
+
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_gravity="center"
+            android:scaleType="fitXY"
+            android:src="@drawable/placeholder_image_two"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="10dp">
+
+            <TextView
+                android:textSize="@dimen/normal_text_5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorBlackThre"
+                android:text="Marios Papakonstantinou 25 - PhD"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"/>
+            <TextView
+                android:textSize="@dimen/normal_text_5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="KPMG Specialist"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:textSize="@dimen/normal_text_3"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorBlackTwo"
+                android:text="Laranca, Cyprus"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

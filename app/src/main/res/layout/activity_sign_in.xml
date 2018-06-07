@@ -8,18 +8,32 @@
     tools:context="com.jobportal.jobseeker.seeker.JobPortalIntro.Activity.SignInActivity">
 
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+      >
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:gravity="center"
+
+        android:layout_gravity="center"
         android:layout_marginRight="25dp"
         android:layout_marginLeft="25dp">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_centerInParent="true">
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:orientation="vertical">
+
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/be_icon_white"/>
+
 
 
             <TextView
@@ -33,6 +47,9 @@
         </LinearLayout>
 
 
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="20dp"/>
 
 
         <!--Email-->
@@ -134,7 +151,7 @@
         <!--Forget Password-->
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:layout_height="45dp"
             android:gravity="center"
             android:orientation="vertical">
             <RelativeLayout
@@ -167,11 +184,11 @@
         <!--Button Signin-->
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="80dp"
+            android:layout_height="60dp"
             android:gravity="center">
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="42dp"
                 android:layout_marginLeft="@dimen/margin_left_one"
                 android:layout_marginRight="@dimen/marging_right_one">
 
@@ -182,7 +199,7 @@
                     android:textAllCaps="false"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/background_rounded_signup"/>
+                    android:background="@drawable/background_rounded_sp_two"/>
             </LinearLayout>
 
         </LinearLayout>
@@ -191,7 +208,7 @@
         <!--WITH-->
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="55dp"
             android:orientation="horizontal"
             android:gravity="center"
             android:layout_marginRight="@dimen/margin_left"
@@ -246,9 +263,10 @@
                         android:layout_height="wrap_content"
                         android:background="@android:color/transparent"/>
                     <ImageView
-                        android:layout_width="50dp"
-                        android:layout_height="50dp"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
                         android:src="@drawable/fb_icon"
+                        android:layout_centerInParent="true"
                         android:layout_centerHorizontal="true"/>
                 </RelativeLayout>
 
@@ -268,9 +286,10 @@
                     android:layout_height="wrap_content"
                     android:background="@android:color/transparent"/>
                 <ImageView
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
                     android:baselineAligned="false"
+                    android:layout_centerInParent="true"
                     android:layout_centerHorizontal="true"
                     android:src="@drawable/gplus_icon" />
                 </RelativeLayout>
@@ -290,8 +309,9 @@
                     android:layout_height="wrap_content"
                     android:background="@android:color/transparent"/>
                 <ImageView
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_centerInParent="true"
                     android:layout_centerHorizontal="true"
                     android:src="@drawable/linked_in"/>
                 </RelativeLayout>
@@ -299,6 +319,7 @@
 
         </LinearLayout>
 
-    </LinearLayout>
 
+    </LinearLayout>
+    </ScrollView>
 </LinearLayout>

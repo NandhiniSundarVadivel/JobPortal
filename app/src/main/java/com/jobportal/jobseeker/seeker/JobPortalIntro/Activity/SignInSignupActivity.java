@@ -1,6 +1,7 @@
 package com.jobportal.jobseeker.seeker.JobPortalIntro.Activity;
 
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.text.Html;
@@ -47,6 +48,10 @@ public class SignInSignupActivity extends AppCompatActivity {
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.btn_signin:
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
+                    btnSignin.setBackground(getResources().getDrawable(R.drawable.background_rounded_signup));
+                    btnSignup.setBackground(getResources().getDrawable(R.drawable.background_rounded_sp_two));
+                }
                 if (page.equalsIgnoreCase("job")) {
                     Intent intents = new Intent(SignInSignupActivity.this, SignInActivity.class);
                     intents.putExtra("page","1");
@@ -59,6 +64,12 @@ public class SignInSignupActivity extends AppCompatActivity {
                 }
                 break;
             case R.id.btn_signup:
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
+                    btnSignup.setBackground(getResources().getDrawable(R.drawable.background_rounded_signup));
+
+                    btnSignin.setBackground(getResources().getDrawable(R.drawable.background_rounded_sp_two));
+                }
+
                 if (page.equalsIgnoreCase("job")) {
                     Intent intent = new Intent(SignInSignupActivity.this, JobSeekerSignupActivity.class);
                     startActivity(intent);

@@ -10,6 +10,7 @@ import android.graphics.BitmapFactory;
 import android.graphics.Matrix;
 import android.media.ExifInterface;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
 import android.os.StrictMode;
@@ -20,6 +21,8 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 
 import com.jobportal.jobseeker.seeker.Global.ImageFilePath;
 import com.jobportal.jobseeker.seeker.R;
@@ -67,9 +70,20 @@ public class ProfileSeekarActivity extends AppCompatActivity {
     Button btnEditCertificate;
     @BindView(R.id.prfPic)
     CircleImageView prfPic;
+    @BindView(R.id.relativeCVUpload)
+    RelativeLayout relativeCVUpload;
+    @BindView(R.id.btn_edit_prf)
+    Button btnEditPrf;
+    @BindView(R.id.relativeEditprf)
+    RelativeLayout relativeEditprf;
+    @BindView(R.id.btn_upload_cv)
+    Button btnUploadCv;
+    @BindView(R.id.relativeEditUpload)
+    LinearLayout relativeEditUpload;
     private int REQUEST_CAMERA = 0, SELECT_FILE = 1;
     Bitmap rotatedBitmap = null;
     Uri uri;
+    boolean flg = false;
     //testing
     //hi how are you shankari
 
@@ -82,15 +96,25 @@ public class ProfileSeekarActivity extends AppCompatActivity {
         StrictMode.setVmPolicy(builder.build());
     }
 
-    @OnClick({R.id.btn_back, R.id.btn_profile_edit, R.id.img_edit_profile_pic, R.id.btn_add_experience, R.id.btn_edit_experience, R.id.btn_add_education, R.id.btn_edit_education, R.id.btn_add_accomplishment, R.id.btn_edit_language, R.id.btn_edit_project, R.id.btn_edit_organization, R.id.btn_edit_certificate})
+    @OnClick({R.id.btn_edit_prf, R.id.btn_upload_cv,R.id.relativeCVUpload, R.id.btn_back, R.id.btn_profile_edit, R.id.img_edit_profile_pic, R.id.btn_add_experience, R.id.btn_edit_experience, R.id.btn_add_education, R.id.btn_edit_education, R.id.btn_add_accomplishment, R.id.btn_edit_language, R.id.btn_edit_project, R.id.btn_edit_organization, R.id.btn_edit_certificate})
     public void onViewClicked(View view) {
         switch (view.getId()) {
+            case R.id.relativeCVUpload:
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
+                    relativeCVUpload.setBackground(getResources().getDrawable(R.drawable.background_rounded_sp_two));
+                }
+                break;
             case R.id.btn_back:
                 onBackPressed();
                 break;
             case R.id.btn_profile_edit:
-                Intent edit_profile = new Intent(ProfileSeekarActivity.this, EditProfileSeekerActivity.class);
-                startActivity(edit_profile);
+                if(!flg){
+                    relativeEditUpload.setVisibility(View.VISIBLE);
+                    flg = true;
+                }else {
+                    flg = false;
+                    relativeEditUpload.setVisibility(View.GONE);
+                }
                 break;
             case R.id.img_edit_profile_pic:
                 callImagePic();
@@ -126,6 +150,14 @@ public class ProfileSeekarActivity extends AppCompatActivity {
             case R.id.btn_edit_organization:
                 break;
             case R.id.btn_edit_certificate:
+                break;
+            case R.id.btn_edit_prf:
+                relativeEditUpload.setVisibility(View.GONE);
+                flg = false;
+                Intent edit_profile = new Intent(ProfileSeekarActivity.this, EditProfileSeekerActivity.class);
+                startActivity(edit_profile);
+                break;
+            case R.id.btn_upload_cv:
                 break;
         }
     }

@@ -18,13 +18,13 @@
 
             <include layout="@layout/item_saved_jobs" />
 
-            <include layout="@layout/item_saved_jobs" />
+            <include layout="@layout/item_saved_jobs_one" />
 
-            <include layout="@layout/item_saved_jobs" />
+            <include layout="@layout/item_saved_jobs_two" />
 
-            <include layout="@layout/item_saved_jobs" />
+            <include layout="@layout/item_saved_jobs_three" />
 
-            <include layout="@layout/item_saved_jobs" />
+            <include layout="@layout/item_saved_jobs_four" />
         </LinearLayout>
 
     </ScrollView>
