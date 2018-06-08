@@ -338,7 +338,7 @@
                 <ImageView
                     android:layout_width="25dp"
                     android:layout_height="25dp"
-                    android:src="@drawable/star_icon"/>
+                    android:src="@drawable/star1"/>
 
             </LinearLayout>
             <LinearLayout
@@ -351,7 +351,7 @@
                 <ImageView
                     android:layout_width="25dp"
                     android:layout_height="25dp"
-                    android:src="@drawable/undo_icon"/>
+                    android:src="@drawable/undo_2"/>
 
             </LinearLayout>
             <LinearLayout

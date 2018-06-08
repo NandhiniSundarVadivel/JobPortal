@@ -4,7 +4,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
-import android.support.v4.view.ViewPager;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -19,8 +18,11 @@ import com.google.android.gms.location.places.Place;
 import com.google.android.gms.location.places.ui.PlaceAutocomplete;
 import com.google.android.gms.location.places.ui.PlaceSelectionListener;
 import com.google.android.gms.location.places.ui.SupportPlaceAutocompleteFragment;
-import com.jobportal.jobseeker.seeker.JobSeekar.adapter.MainPagerAdapter;
+import com.jobportal.jobseeker.seeker.JobSeekar.adapter.TinderCard;
 import com.jobportal.jobseeker.seeker.R;
+import com.mindorks.placeholderview.SwipeDecor;
+import com.mindorks.placeholderview.SwipePlaceHolderView;
+import com.mindorks.placeholderview.listeners.ItemRemovedListener;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -53,7 +55,9 @@ public class HomeFragment extends Fragment {
 
     private int PLACE_AUTOCOMPLETE_REQUEST_CODE = 200;
     String latitude = "", longitude = "", location;
-
+    private SwipePlaceHolderView mSwipView;
+    public  static  View viewGreen;
+    public static   View viewRed;
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -62,100 +66,93 @@ public class HomeFragment extends Fragment {
 
 
         unbinder = ButterKnife.bind(this, roootView);
+        viewGreen = (View) roootView.findViewById(R.id.viewGreen);
+        viewRed = (View) roootView.findViewById(R.id.viewRed);
+        mSwipView = (SwipePlaceHolderView) roootView.findViewById(R.id.swipeView);
 
-        final ViewPager viewPager = (ViewPager) roootView.findViewById(R.id.vp_main);
+        mSwipView.disableTouchSwipe();
+        mSwipView.addItemRemoveListener(new ItemRemovedListener() {
 
-        viewPager.setAdapter(new MainPagerAdapter(getFragmentManager()));
-
-
-
-
-       /* MyPagerAdapter adapterBackground = new MyPagerAdapter(getActivity(), strings, new MyPagerAdapter.CustomItemClickListener() {
             @Override
-            public void onItemClick(View v, int position) {
+            public void onItemRemoved(int count) {
+                if(count == 0){
+                    Log.e("emters here","1");
+                    mSwipView.addView(new TinderCard(getActivity(),"Designer","Scientronics Limited","Limassol,Cyprus"))
+                            .addView(new TinderCard(getActivity(),"Android Developer","ExxonMobil","Beijing"))
+                            .addView(new TinderCard(getActivity(),"Ios Developer","Apple Inc","Limassol,Cyprus"))
+                            .addView(new TinderCard(getActivity(),"MEAN Stack Developer","Berkshire Hathaway","Beijing"))
+                            .addView(new TinderCard(getActivity(),"Chemical Lead","Sinopec Group","Beijing"))
+                            .addView(new TinderCard(getActivity(),"Designer","Scientronics Limited","Limassol,Cyprus"))
+                            .addView(new TinderCard(getActivity(),"Android Developer","ExxonMobil","Beijing"))
+                            .addView(new TinderCard(getActivity(),"Ios Developer","Apple Inc","Limassol,Cyprus"))
+                            .addView(new TinderCard(getActivity(),"MEAN Stack Developer","Berkshire Hathaway","Beijing"))
+                            .addView(new TinderCard(getActivity(),"Chemical Lead","Sinopec Group","Beijing"))
+                            .addView(new TinderCard(getActivity(),"Designer","Scientronics Limited","Limassol,Cyprus"))
+                            .addView(new TinderCard(getActivity(),"Android Developer","ExxonMobil","Beijing"))
+                            .addView(new TinderCard(getActivity(),"Ios Developer","Apple Inc","Limassol,Cyprus"))
+                            .addView(new TinderCard(getActivity(),"MEAN Stack Developer","Berkshire Hathaway","Beijing"))
+                            .addView(new TinderCard(getActivity(),"Chemical Lead","Sinopec Group","Beijing"));
+                }else{
+                    Log.e("emters here","2");
+                }
 
             }
         });
-        viewPager.setAdapter(adapterBackground);*/
 
 
-      /*  viewpagerTop.setClipChildren(false);
-        viewpagerTop.setPageMargin(getResources().getDimensionPixelOffset(R.dimen.pager_margin));
-        viewpagerTop.setOffscreenPageLimit(3);
-        viewpagerTop.setPageTransformer(false, new CarouselEffectTransformer(getActivity()));*/
-        //setupViewPager();
+        mSwipView.getBuilder()
+//                .setSwipeType(SwipePlaceHolderView.SWIPE_TYPE_VERTICAL)
+                .setDisplayViewCount(3)
+                .setIsUndoEnabled(true)
+                .setWidthSwipeDistFactor(4)
+                .setHeightSwipeDistFactor(6)
+                .setSwipeDecor(new SwipeDecor()
+//                        .setMarginTop(300)
+//                        .setMarginLeft(100)
+//                        .setViewGravity(Gravity.TOP)
+                        .setPaddingTop(20)
+                        .setSwipeMaxChangeAngle(2f)
+                        .setRelativeScale(0.01f));
 
 
-/*
-        pager.setAdapter(new MainPagerAdapter(getFragmentManager()));
-        pager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
+
+        Log.e("emters here","3");
+
+        // mSwipView.getBuilder().getSwipePlaceHolderView();
+
+        mSwipView.addView(new TinderCard(getActivity(),"Designer","Scientronics Limited","Limassol,Cyprus"))
+                .addView(new TinderCard(getActivity(),"Android Developer","ExxonMobil","Beijing"))
+                .addView(new TinderCard(getActivity(),"Ios Developer","Apple Inc","Limassol,Cyprus"))
+                .addView(new TinderCard(getActivity(),"MEAN Stack Developer","Berkshire Hathaway","Beijing"))
+                .addView(new TinderCard(getActivity(),"Chemical Lead","Sinopec Group","Beijing"))
+                .addView(new TinderCard(getActivity(),"Designer","Scientronics Limited","Limassol,Cyprus"))
+                .addView(new TinderCard(getActivity(),"Android Developer","ExxonMobil","Beijing"))
+                .addView(new TinderCard(getActivity(),"Ios Developer","Apple Inc","Limassol,Cyprus"))
+                .addView(new TinderCard(getActivity(),"MEAN Stack Developer","Berkshire Hathaway","Beijing"))
+                .addView(new TinderCard(getActivity(),"Chemical Lead","Sinopec Group","Beijing"))
+                .addView(new TinderCard(getActivity(),"Designer","Scientronics Limited","Limassol,Cyprus"))
+                .addView(new TinderCard(getActivity(),"Android Developer","ExxonMobil","Beijing"))
+                .addView(new TinderCard(getActivity(),"Ios Developer","Apple Inc","Limassol,Cyprus"))
+                .addView(new TinderCard(getActivity(),"MEAN Stack Developer","Berkshire Hathaway","Beijing"))
+                .addView(new TinderCard(getActivity(),"Chemical Lead","Sinopec Group","Beijing"));
+        new Thread(new Runnable(){
             @Override
-            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
-                Log.e("position2",position+"");
+            public void run() {
+                try {
+                    Thread.sleep(3000);
+                    mSwipView.enableTouchSwipe();
+
+                }catch (InterruptedException e){
+                    e.printStackTrace();
+                }
             }
-
-            @Override
-            public void onPageSelected(int position) {
-
-                Log.e("position1",position+"");
-            }
-
-            @Override
-            public void onPageScrollStateChanged(int state) {
-                Log.e("position",state+"");
-            }
-        });*/
-
-      /*  carouselView.setPageCount(NUMBER_OF_PAGES);
-        // set ViewListener for custom view
-        carouselView.setViewListener(viewListener);*/
+        }).start();
 
 
-       /* final HomeFragmentAdapter adapter1 = new HomeFragmentAdapter(getContext(), new HomeFragmentAdapter.CustomItemClickListener() {
-            @Override
-            public void onItemClick(View v, int position) {
-                Log.e("postion",position+"");
-                String posi = String.valueOf(position);
-
-                Intent intent = new Intent(getContext(), HomeDetailsActivity.class);
-                intent.putExtra("pos",posi);
-                startActivity(intent);
 
 
-            }
-        });
-        pager.setAdapter(adapter1);
 
 
-//        pageControl.setPosition(1);
-*//*
-        tabLayout.setupWithViewPager(pager, true);
-*//*
-        pager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
-            @Override
-            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
-                int width = pager.getWidth();
-                pager.scrollTo((int) (width * position + width * positionOffset), 0);
-            }
-
-            @Override
-            public void onPageSelected(int position) {
-                Log.e("activity", "2");
-
-                // pos = position;
-//                imageView.setImageDrawable(getResources().getDrawable(image[position]));
-                //   imageSelected.setImageDrawable(getResources().getDrawable(imageSelect[position]));
-                Log.e("countadapter", String.valueOf(adapter1.getCount()));
-                //  Log.e("pos", String.valueOf(pos));
-
-            }
-
-            @Override
-            public void onPageScrollStateChanged(int state) {
-
-            }
-        });
-*/
         return roootView;
     }
 
@@ -221,62 +218,8 @@ public class HomeFragment extends Fragment {
         }
     }
 
-    private void setupViewPager() {
-        // Set Top ViewPager Adapter
-          /*  MyPagerAdapter adapter = new MyPagerAdapter(getActivity(), strings, new MyPagerAdapter.CustomItemClickListener() {
-                @Override
-                public void onItemClick(View v, int position) {
-                    String posi = String.valueOf(position);
-
-                    Intent intent = new Intent(getContext(), HomeDetailsActivity.class);
-                    intent.putExtra("pos", posi);
-                    startActivity(intent);
-                }
-            });
-            viewpagerTop.setAdapter(adapter);*/
-
-        // Set Background ViewPager Adapter
-
-/*
-        viewpagerTop.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
-
-            private int index = 0;
-
-            @Override
-            public void onPageSelected(int position) {
-                index = position;
-
-            }
-
-            @Override
-            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
-                int width = viewPagerbackground.getWidth();
-                viewPagerbackground.scrollTo((int) (width * position + width * positionOffset), 0);
-            }
-
-            @Override
-            public void onPageScrollStateChanged(int state) {
-                if (state == ViewPager.SCROLL_STATE_IDLE) {
-                    viewPagerbackground.setCurrentItem(index);
-                }
-
-                // viewPagerBackground.setCurrentItem(index);
-            }
-        });
-*/
-    }
 
 
-  /*  ViewListener viewListener = new ViewListener() {
-
-        @Override
-        public View setViewForPosition(int position) {
-            View customView = getLayoutInflater().inflate(R.layout.fragment_adpter_layout, null);
-            //set view attributes here
-
-            return customView;
-        }
-    };*/
 
     @Override
     public void onDestroyView() {
